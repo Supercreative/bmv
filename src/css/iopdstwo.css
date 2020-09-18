@@ -18,13 +18,18 @@ header.row {
   to {margin-top:-25px;}
 }
 @keyframes shownav {
-  from {left:-100vw;display:none; }
-  to {left:0px;display:flex;}
+  from {display:none;left:-100vw; }
+  to {display:flex;left:0px;}
+}
+@keyframes hidenav {
+  from {opacity:1;left:0px; }
+  to {opacity:0;left:-100vw;}
 }
 
 
 
 .hidenav {animation:none;}
+.hideme {display:flex;}
 nav.topnav {
   height:60px;
   background:#fff;
@@ -74,13 +79,16 @@ nav.topnav .rightblock {
   flex:0 120px;
 }
 nav.topnav .rightblock .item {
-  height:100%;
+  height:44px;
   display:flex;
-  flex:0 60px;
+  flex:0 44px;
   justify-content:center;
   align-items:center;
   color:#000;
-  min-width:60px;
+  min-width:44px;
+}
+nav.topnav .rightblock .item:hover {
+  background:#f6f6f6;border-radius:22px;
 }
 nav.topnav a.mnavtrigger {display:none;}
 
@@ -164,9 +172,10 @@ nav.topnav a.mnavtrigger {
   color:#000;
 }
 nav.topnav .navblock {
-  display:none;
+  display:flex;
   position:fixed;
   top:0px;
+  left:0px;
   background:#fff;
   flex:1;
   height:100%;
@@ -192,7 +201,7 @@ nav.topnav .navblock a.item {
   flex:1;
   margin-left:60px;
   margin-right:60px;
-  min-width:calc(100% - 120px);
+  min-width:calc(100% - 140px);
   align-items:center;
   max-height:44px;
   background:#f6f6f6;
@@ -200,8 +209,11 @@ nav.topnav .navblock a.item {
   padding-left:20px;
 }
 nav.topnav .navblock a.item:hover::after {
+  position:relative;
   font-size:16px;
-  margin-left:65%;
+  padding-top:0px;
+  margin-left:auto;
+  margin-right:0px;
 }
 nav.topnav a.logo {
   display:flex;
@@ -215,25 +227,25 @@ nav.topnav .rightblock {
   flex:0 120px;
   justify-content:flex-end;
 }
-nav.topnav .rightblock .item {
+nav.topnav .rightblock a.item {
   flex:0 44px;
-  height:60px;
+  height:44px;
   min-width:44px;
 }
 
 .shownav {
   animation:shownav .5s;
   display:flex !important;
-  left:0px;
 }
 .hidenav {
-  animation:shownav .5s reverse;
-  left:-100vh;
+  animation:hidenav .5s;
 }
+.hideme {display:none !important;}
 }
 
 
 @media (max-width: 36em) {
+  body {min-width:320px;}
 nav.topnav .navblock {min-width:100%;}
 nav.topnav {
   padding-left:10px;
