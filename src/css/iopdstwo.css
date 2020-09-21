@@ -5,13 +5,19 @@
   --bmv-red: #cf152d;
   --bmv-blue: #1f42ab;      
 }
+.gray{background: var(--lt-gray);}
+.white{background: white;}
 
 body {
   margin:0px !important;
   padding:0px !important;
-  background:#f6f6f6;
-  font-size:16px;font-family: 'Source Sans Pro', sans-serif;
+  color: var(--black);
+  font-size:16px;
+  font-weight: 400;
+  font-family: 'Source Sans Pro', sans-serif;
+  background:var(--lt-gray);
 }
+
 header.row {
   margin-left:0px;
   margin-right:0px;
@@ -39,14 +45,13 @@ header.row {
 .hidenav {animation:none;}
 .hideme {display:flex;}
 nav.topnav {
+  flex:1;
+  display:flex;  
+  justify-content:center;
+  align-items:center;  
   height:60px;
   background:#fff;
-  flex:1;
-  display:flex;
-  padding-left:5%;
-  padding-right:5%;
-  justify-content:center;
-  align-items:center;
+  padding: 0 5% 0 5%;
 }
 nav.topnav a:hover {
   text-decoration:none;
@@ -75,8 +80,8 @@ nav.topnav .navblock {
     max-width:140px;
   }
   nav.topnav .navblock a.item:hover::after {
-    font-family:"Material Icons";
     content:"fiber_manual_record";
+    font-family:"Material Icons";
     font-size:12px;
     position:absolute;
     padding-top:45px;
@@ -103,6 +108,7 @@ nav.topnav a.mnavtrigger {display:none;}
 .white-band {
   background:#fff;
   width:100%;
+  padding: 60px 10%;
   padding-left:10%;
   padding-right:10%;
   padding-top:60px;
@@ -131,7 +137,8 @@ input.text {
   padding-left:15px;
   padding-right:15px;
   padding-bottom:5px;
-  flex:1;width;100%;
+  flex:1;
+  width:100%;
   margin:0px;
   margin-top:-50px;
   border-top-left-radius:5px;
@@ -163,6 +170,198 @@ label.text {
   margin-top:-25px;
   border-bottom-color:#1f42ab;
 }
+
+/*////////////// JESSE CSS ////////////////////////////////////////////*/
+
+.subpage-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  padding: 0 20px;
+  background:#1F42AB;
+}
+.subpage-title{
+  position: relative;
+  padding: 0 0 0 10px;
+  color: white;
+  font-weight: 600;
+  font-size: 20px;
+}
+.subpage-title::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--bmv-red);
+}
+
+section.profile{
+  display: flex;
+  flex-direction: column;
+  margin-top: -13px;
+  padding: 30px 20px 50px;
+  border-radius: 16px 16px 0 0;
+  background: white;
+}
+.name{
+  text-align: center;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 36px;
+}
+.info-tile{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px 0;;
+  margin: 15px 0;
+  border-radius: 10px;
+}
+.license-number{
+  font-size: 36px;
+  font-weight: 700;
+}
+.status-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.status{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  height: 36px;
+  width: 100px;
+  margin-right: 10px;
+  border-radius: 20px;
+}
+.status-info{
+  line-height: 0;
+}
+.status-icon{
+  display: inline-block;
+  margin: 4px 5px 0 9px;
+}
+.license-btn-box{
+  display: flex;
+  justify-content: space-between;
+}
+.license-btn-box > div:nth-child(1){
+  margin-left: 0;
+}
+.license-btn-box > div:nth-child(2){
+  margin-right: 0;
+}
+.license-edit-btn{
+  position: relative;
+  width: 50%;
+  height: 73px;
+  margin: 0 8px;
+  border-radius: 10px;
+  background: #f6f6f6;
+}
+.license-edit-btn > div:nth-child(1){
+  padding: 10px 0 4px 20px;
+}
+.license-edit-btn > div:nth-child(2){
+  padding: 0 0 0 20px;
+  font-size: 22px;
+  font-weight: 600;
+}
+.license-edit-btn::after{
+  content: '';
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 24px;
+  height: 24px;
+  background: url(../img/SVG/edit-icon.svg) no-repeat;
+}
+a.btn-primary{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 44px;
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 0;
+  text-decoration: none;
+  color: white;
+  border-radius: 25px;
+  background: var(--bmv-red);
+}
+
+.sub-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  border-radius: 16px 16px 0 0;
+  padding: 0 20px;
+  background: black;
+}
+.section-wrapper{
+  display: flex;
+  flex-direction: column;
+  margin-top: -13px;
+  border-radius: 16px 16px 0 0;
+  padding: 40px 20px 50px;
+}
+.car-photo{
+  display: flex;
+  justify-content: center;
+  margin: 0 0 20px 0;
+}
+.vehicle-make {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 30px;
+}
+
+.model-year {
+  display: flex;
+  justify-content: center;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 0;
+  padding: 15px 0;
+}
+.vehicle-desc{
+  display: flex;
+  justify-content: center;
+}
+.vehicle-desc > div{
+  padding: 0 10px;
+  border-right: 1px solid #a1a1a1;
+}
+.vehicle-desc > div:nth-child(1){
+  padding-left: 0;
+  border-left: 0;
+}
+.vehicle-desc > div:nth-child(3){
+  padding-right: 0;
+  border-right: 0;
+}
+
+.divider{
+  width: 80%;
+  height: 1px;
+  background: #e2e2e2;
+  margin: 50px auto;
+}
+
+/*//// END JESSE CSS //////////////////////////////*/
 
 @media (max-width: 62em) {
 
