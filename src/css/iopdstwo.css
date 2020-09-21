@@ -1,3 +1,11 @@
+:root{
+  --white: white;
+  --black: black;
+  --lt-gray: #f6f6f6;
+  --bmv-red: #cf152d;
+  --bmv-blue: #1f42ab;      
+}
+
 body {
   margin:0px !important;
   padding:0px !important;
@@ -11,7 +19,7 @@ header.row {
 
 @keyframes focuslabel {
   from {font-size:1em;max-height:50px;line-height:50px;margin-top:0px;}
-  to {font-size:.875em;max-height:20px;line-height:20px;margin-top:5px;x}
+  to {font-size:.875em;max-height:20px;line-height:20px;margin-top:5px;}
 }
 @keyframes focusfield {
   from {margin-top:-50px; }
