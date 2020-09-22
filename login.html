@@ -1,0 +1,120 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>SoO Design System</title>
+  <meta name="description" content="SoO Design System">
+  <meta name="author" content="Innovate Ohio Platform">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="src/css/bootstrap.min.css">
+  <link rel="stylesheet" href="src/css/iopdstwo.css">
+
+</head>
+
+<body>
+  <header class="row">
+    <nav class="topnav">
+      <a class="mnavtrigger" onclick="navToggle()"><i class="material-icons">menu</i></a>
+      <a class="logo"><img src="src/img/bmv-main-logo-large.png"></a>
+      <div class="navblock hidenav hideme" id="navblock">
+        <a class="mnavclose" onclick="navToggle()"><i class="material-icons">keyboard_backspace</i></a>
+        <a class="item">myBMV</a>
+        <a class="item">oPlates</a>
+        <a class="item">Drivers License</a>
+        <a class="item">Other Services</a>
+        <a class="item hide">Link 1</a>
+      </div>
+      <div class="rightblock">
+        <a class="item"><i class="material-icons">search</i></a>
+        <a class="item"><i class="material-icons">person</i></a>
+      </div>
+    </nav>
+  </header>
+
+<section class="row">
+  <article class="gray-band flex-horizontal-center container">
+    <div class="col-lg-4 col-md-6 col-sm-7 col-xs-12">
+      <div class="">Make it Easy</div><a class="button primary">OH|ID Login</a>
+    </div>
+  </article>
+  <article class="container">
+  <div class="tabwrapper" role="navigation">
+  <ul class="tabs large" id="tabber1">
+    <li class="tab active" onclick="tabs('tabber1','item1',this.id)" id="tab1">Drivers License</li>
+    <li class="tab" onclick="tabs('tabber1','item2',this.id)" id="tab2">License Plate</li>
+    <li class="tab" onclick="tabs('tabber1','item3',this.id)" id="tab3">Personal Information</li>
+  </ul>
+  <div class="tab-content  col-lg-4 col-md-6 col-sm-7 col-xs-12 ml-auto mr-auto" id="tabber1content">
+    <div class="tab-content-item active flex-horizontal-center" id="item1">
+      <form class="white">
+        <div class="fieldwrapper">
+        <label class="text">Drivers License or State ID Number</label>
+        <input type="text" class="text"></input>
+        </div>
+        <div class="fieldwrapper">
+        <label class="text">Date of Birth</label>
+        <input type="text" class="text"></input>
+        </div>
+        <div class="fieldwrapper">
+        <label class="text">First Letter of Last Name</label>
+        <input type="text" class="text"></input>
+        </div>
+        <div class="fieldwrapper">
+        <label class="text">Last 4 Digits of SSN</label>
+        <input type="text" class="text"></input>
+        </div>
+        <a class="button primary">Log-In</a>
+      </form>
+  </div>
+    <div class="tab-content-item flex-horizontal-center" id="item2">
+      <form class="white">
+        <div class="fieldwrapper">
+        <label class="text">License Plate</label>
+        <input type="text" class="text"></input>
+        </div>
+        <div class="fieldwrapper">
+        <label class="text">Last 4 Digits of SSN or Tax ID</label>
+        <input type="text" class="text"></input>
+        </div>
+        <a class="button primary">Log-In</a>
+      </form>
+    </div>
+    <div class="tab-content-item flex-horizontal-center" id="item3">
+      <form class="white">
+        <div class="fieldwrapper">
+        <label class="text">Last Name</label>
+        <input type="text" class="text"></input>
+        </div>
+        <div class="fieldwrapper">
+        <label class="text">First Name</label>
+        <input type="text" class="text"></input>
+        </div>
+        <div class="fieldwrapper">
+        <label class="text">Middle Name or Initial</label>
+        <input type="text" class="text"></input>
+        </div>
+        <div class="fieldwrapper">
+        <label class="text">Suffix</label>
+        <input type="text" class="text"></input>
+        </div>
+        <div class="fieldwrapper">
+        <label class="text">Date of Birth</label>
+        <input type="text" class="text"></input>
+        </div>
+        <div class="fieldwrapper">
+        <label class="text">Last 4 Digits of SSN</label>
+        <input type="text" class="text"></input>
+        </div>
+        <a class="button primary">Log-In</a>
+      </form>
+    </div>
+  </div>
+</div>
+  </article>
+</section>
+<script type="text/javascript" src="src/js/iopvanilla.js"></script>
+</body>
+</html>
