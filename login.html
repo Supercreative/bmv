@@ -1,0 +1,132 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>SoO Design System</title>
+  <meta name="description" content="SoO Design System">
+  <meta name="author" content="Innovate Ohio Platform">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="src/css/bootstrap.min.css">
+  <link rel="stylesheet" href="src/css/iopdstwo.css">
+
+</head>
+
+<body>
+  <nav class="topnav" role="navigation" aria-label="agencyname main navigation">
+    <a class="logo" href="#"><img src="src/img/bmv-main-logo-large.png"></a>
+    <button class="mnavtrigger" type="button" onclick="navToggle()" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="material-icons">menu</i>
+    </button>
+    <ul class="navblock hidenav hideme" role="menubar" aria-label="agencyname primary links" id="navblock">
+      <li class="mnavclose"><a onclick="navToggle()" href="javascript:void(0)"><i class="material-icons">keyboard_backspace</i></a></li>
+      <li class="item" role="none"><a href="#" tabindex="0" role="menuitem">myBMV</a></li>
+      <li class="item" role="none"><a href="#" tabindex="0" role="menuitem">oPlates</a></li>
+      <li class="item" role="none"><a href="#" tabindex="0" role="menuitem">Drivers License</a></li>
+      <li class="item" role="none"><a href="#" tabindex="0" role="menuitem">Other Services</a></li>
+      <li class="item" role="none"><a href="#" tabindex="0" role="menuitem">Extra Link</a></li>
+    </ul>
+    <ul class="rightblock" role="menubar" aria-label="search and profile links">
+      <li class="item" role="none"><a class="item" href="javascript:void(0)"><i class="material-icons">search</i></li></a>
+      <li class="item" role="none"><a class="item" href="javascript:void(0)"><i class="material-icons">person</i></li></a>
+    </ul>
+  </nav>
+<section class="row-fluid">
+    <article class="col-xs-12 page-header">
+      &nbsp;
+    </article>
+</section>
+<section class="row-fluid">
+  <article class="col-xs-12 white stripe">
+    <div class="feature col-lg-5 col-md-6 col-sm-7 col-xs-12 ml-auto mr-auto">
+      <div class="title" tabindex="0"><h2>Make it Easy</h2><p tabindex="0">Use Your OH|ID</p></div>
+      <div class="action flex-horizontal-center"><a class="button secondary black" href="#">OH|ID Login</a></div>
+    </div>
+  </article>
+  <article class="col-xs-12 gray">
+    <article class="col-xs-12 stripe">
+      <div class=" row tabwrapper" role="navigation">
+
+      <div class="col-lg-5 col-md-6 col-sm-7 col-xs-12 ml-auto mr-auto flex-horizontal-center"><h2 tabindex="0">Don't Have an OH|ID? <strong>Use a Guest Login</strong></h2></div>
+      <ul class="tabs large col-lg-6 col-md-6 col-sm-7 col-xs-12 ml-auto mr-auto" id="tabber1">
+        <li class="tab active"><a onclick="tabs('tabber1','item1',this.id)" id="tab1" href="javascript:void(0)">Drivers License</a></li>
+        <li class="tab"> <a onclick="tabs('tabber1','item2',this.id)" id="tab2" href="javascript:void(0)">License Plate</a></li>
+        <li class="tab"> <a onclick="tabs('tabber1','item3',this.id)" id="tab3" href="javascript:void(0)">Personal Information</a></li>
+      </ul>
+      <div class="tab-content col-lg-6 col-md-6 col-sm-7 col-xs-12 ml-auto mr-auto" id="tabber1content">
+        <div class="tab-content-item active flex-horizontal-center" id="item1" role="tabpanel">
+          <form class="white" role="form" >
+            <div class="description" tabindex="0">Information entered must match your ID</div>
+            <div class="fieldwrapper">
+            <label class="text" for="dl1">Drivers License or State ID Number</label>
+            <input type="text" class="text" onblur="focusOut(this.id);" id="dl1" role="textbox"></input>
+            </div>
+            <div class="fieldwrapper">
+            <label class="text" for="dob1">Date of Birth</label>
+            <input type="text" class="text" onblur="focusOut(this.id);" id="dob1" role="textbox"></input>
+            </div>
+            <div class="fieldwrapper">
+            <label class="text" for="fll1">First Letter of Last Name</label>
+            <input type="text" class="text" onblur="focusOut(this.id);" id="fll1" role="textbox"></input>
+            </div>
+            <div class="fieldwrapper">
+            <label class="text" for="ssn1">Last 4 Digits of SSN</label>
+            <input type="text" class="text" onblur="focusOut(this.id);" id="ssn1" role="textbox"></input>
+            </div>
+            <a class="button primary" href="javascript:void(0)" role="button">Log-In</a>
+          </form>
+      </div>
+        <div class="tab-content-item flex-horizontal-center" id="item2" role="tabpanel">
+          <form class="white" role="form">
+            <div class="description" tabindex="0">Information entered must match your ID</div>
+            <div class="fieldwrapper">
+            <label class="text" for="lp2">License Plate</label>
+            <input type="text" class="text" onblur="focusOut(this.id);" id="lp2" role="textbox"></input>
+            </div>
+            <div class="fieldwrapper">
+            <label class="text" for="ssn2">Last 4 Digits of SSN or Tax ID</label>
+            <input type="text" class="text" onblur="focusOut(this.id);" id="ssn2" role="textbox"></input>
+            </div>
+            <a class="button primary" href="javascript:void(0)" role="button">Log-In</a>
+          </form>
+        </div>
+        <div class="tab-content-item flex-horizontal-center" id="item3" role="tabpanel">
+          <form class="white" role="form">
+            <div class="description" tabindex="0">Information entered must match your ID</div>
+            <div class="fieldwrapper">
+            <label class="text" for="ln3">Last Name</label>
+            <input type="text" class="text" onblur="focusOut(this.id);" id="ln3" role="textbox"></input>
+            </div>
+            <div class="fieldwrapper">
+            <label class="text" for="ln3">First Name</label>
+            <input type="text" class="text" onblur="focusOut(this.id);" id="fn3" role="textbox"></input>
+            </div>
+            <div class="fieldwrapper">
+            <label class="text" for="mi3">Middle Name or Initial</label>
+            <input type="text" class="text" onblur="focusOut(this.id);" id="mi3" role="textbox"></input>
+            </div>
+            <div class="fieldwrapper">
+            <label class="text" for="suf3">Suffix</label>
+            <input type="text" class="text" onblur="focusOut(this.id);" id="suf3" role="textbox"></input>
+            </div>
+            <div class="fieldwrapper">
+            <label class="text" for="dob3">Date of Birth</label>
+            <input type="text" class="text" onblur="focusOut(this.id);" id="dob3" role="textbox"></input>
+            </div>
+            <div class="fieldwrapper">
+            <label class="text" for="ssn3">Last 4 Digits of SSN</label>
+            <input type="text" class="text" onblur="focusOut(this.id);" id="ssn3" role="textbox"></input>
+            </div>
+            <a class="button primary" href="javascript:void(0)" role="button">Log-In</a>
+          </form>
+        </div>
+      </div>
+    </div>
+    </article>
+  </article>
+</section>
+<script type="text/javascript" src="src/js/iopvanilla.js"></script>
+</body>
+</html>
