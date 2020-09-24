@@ -1,138 +1,169 @@
-<!DOCTYPE html>
+<!doctype html>
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BMV Profile</title>
+  <meta charset="utf-8">
 
-    <link rel="stylesheet" href="src/css/iopdstwo.css">
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+  <title>SoO Design System</title>
+  <meta name="description" content="SoO Design System">
+  <meta name="author" content="Innovate Ohio Platform">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="src/css/bootstrap.min.css">
+  <link rel="stylesheet" href="src/css/iopdstwo.css">
+
 </head>
 
 <body>
-
-    <div class="nav"></div>
+  <nav class="topnav" role="navigation" aria-label="agencyname main navigation">
+    <a class="logo" href="#"><img src="src/img/bmv-main-logo-large.png"></a>
+    <button class="mnavtrigger" type="button" onclick="navToggle()" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="material-icons">menu</i>
+    </button>
+    <ul class="navblock hidenav hideme" role="menubar" aria-label="agencyname primary links" id="navblock">
+      <li class="mnavclose"><a onclick="navToggle()" href="javascript:void(0)"><i class="material-icons">keyboard_backspace</i></a></li>
+      <li class="item" role="none"><a href="#" tabindex="0" role="menuitem">myBMV</a></li>
+      <li class="item" role="none"><a href="#" tabindex="0" role="menuitem">oPlates</a></li>
+      <li class="item" role="none"><a href="#" tabindex="0" role="menuitem">Drivers License</a></li>
+      <li class="item" role="none"><a href="#" tabindex="0" role="menuitem">Other Services</a></li>
+      <li class="item" role="none"><a href="#" tabindex="0" role="menuitem">Extra Link</a></li>
+    </ul>
+    <ul class="rightblock" role="menubar" aria-label="search and profile links">
+      <li class="item" role="none"><a class="item" href="javascript:void(0)"><i class="material-icons">search</i></li></a>
+      <li class="item" role="none"><a class="item" href="javascript:void(0)"><i class="material-icons">person</i></li></a>
+    </ul>
+  </nav>
+<section class="row-fluid gray">
+  <div class="container">
+  <div class="profile-card col-lg-10 col-md-10 col-sm-12 col-xs-12 ml-auto mr-auto">
     <div class="subpage-header">
-        <div class="subpage-title">Driver's License</div>
+        <div class="subpage-title" tabindex="0">Driver's License</div>
         <div class="subpage-icon"><img src="src/img/SVG/icon-license.svg" width="62" height="33" alt=""></div>
     </div>
-
     <section class="profile">
-
         <div class="name">
-            <div id="first">Jesse <span>L</span></div>  
-            <div id="last">Shugart</div>
-        </div> 
+            <div id="first" tabindex="0">Jesse <span tabindex="0">L</span></div>
+            <div id="last" tabindex="0">Shugart</div>
+        </div>
 
         <div class="info-tile gray">
-            <div>Driver's License Number</div>
-            <div class="license-number">259 152 5429</div>
+            <div tabindex="0">Driver's License Number</div>
+            <div class="license-number" tabindex="0">259 152 5429</div>
             <div class="status-box">
                 <div class="status white">
-                    <div class="status-info">Valid</div>
+                    <div class="status-info" tabindex="0">Valid</div>
                     <div class="status-icon"><img src="src/img/SVG/icon-check.svg" width="24px"></div>
                 </div>
-                <div>Expiration <span id="date">10/09/22</span></div>
+                <div tabindex="0">Expiration <span id="date" tabindex="0">10/09/22</span></div>
             </div>
         </div>
 
         <div class="license-btn-box">
             <div class="license-edit-btn">
-                <div>Organ Donor</div>
-                <div>Enrolled</div>
+                <div tabindex="0">Organ Donor</div>
+                <div tabindex="0">Enrolled</div>
             </div>
             <div class="license-edit-btn">
-                <div>Next of Kin</div>
-                <div>Registered</div>
+                <div tabindex="0">Next of Kin</div>
+                <div tabindex="0">Registered</div>
             </div>
         </div>
-        <a href="" class="btn-primary">Replace My Driver's License</a>
-
-    </section> 
-<!-- END Profile -->
-
-    <section id="vehicle">
-
-        <div class="sub-header">
-            <div class="subpage-title">My vehicles</div>
-            <div class="subpage-icon"><img src="src/img/SVG/icon-car.svg" width="34" alt=""></div>
-        </div>
-
-    <div class="section-wrapper gray">
-
-        <div id="car_01">
-        <div class="car-photo">
-            <img src="src/img/car-bmw-m6.png" width="180px" alt="">
-        </div>
-
-        <div class="vehicle-make">
-            <div class="make">BMW&nbsp;</div>
-            <div class="model">M6</div>
-            
-        </div>
-
-            <div class="model-year">2016</div>
-
-        <div class="vehicle-desc">
-            <div class="color">Orange</div>
-            <div class="doors">4 Door Sedan</div>
-            <div class="driver-class">Passenger</div>
-        </div>
-        
-
-    <div class="info-tile white">
-        <div>License Plate Number</div>
-        <div class="license-number">LJG 8899</div>
-        <div class="status-box">
-            <div class="status gray">
-                <div class="status-info">Valid</div>
-                <div class="status-icon"><img src="src/img/SVG/icon-check.svg" width="24px"></div>
-            </div>
-            <div class="expiration">Expiration <span id="date">12/01/23</span></div>
-        </div>
-    </div>  
-        <a href="" class="btn-primary">Renew My Registration</a>
+        <div class="actions">
+        <a href="" class="button primary">Replace My Driver's License</a>
+      </div>
+    </section>
+  </div>
+  <div class="profile-card col-lg-10 col-md-10 col-sm-12 col-xs-12 ml-auto mr-auto">
+    <div class="sub-header">
+        <div class="subpage-title" tabindex="0">My vehicles</div>
+        <div class="subpage-icon"><img src="src/img/SVG/icon-car.svg" width="34" alt=""></div>
     </div>
-    <!-- end car_01 -->
-    <div class="divider"></div>
+<section class="profile">
+<div class="section-wrapper gray">
 
-    <div id="car_02">
-
-        <div id="car_02" class="car-photo">
-            <img src="src/img/car-bmw-z4.png" width="180px" alt="">
-        </div>
-
-        <div class="vehicle-make">
-            <div class="make">BMW&nbsp;</div>
-            <div class="model">Z4 M</div>
-            
-        </div>
-
-            <div class="model-year">2008</div>
-
-        <div class="vehicle-desc">
-            <div class="color">Blue</div>
-            <div class="doors">2 Door Coupe</div>
-            <div class="driver-class">Passenger</div>
-        </div>
-
-    <div class="info-tile white">
-        <div>License Plate Number</div>
-        <div class="license-number">HLM 3566</div>
-        <div class="status-box">
-            <div class="status gray">
-                <div class="status-info">Invalid</div>
-                <div class="status-icon"><img src="src/img/SVG/icon-alert.svg" width="24px"></div>
-            </div>
-            <div class="expiration">Expiration <span id="date">11/27/19</span></div>
-        </div>
-    </div>  
-        <a href="" class="btn-primary">Renew My Registration</a>
-    </div>
-    <!-- end car_02 -->
+    <div id="car_01" class="sub-section">
+      <div class="car-photo">
+          <img src="src/img/car-bmw-m6.png" alt="">
+      </div>
+    <div class="identifiers">
+    <div class="vehicle-make">
+        <div class="make" tabindex="0">BMW&nbsp;</div>
+        <div class="model" tabindex="0">M6</div>
 
     </div>
+
+        <div class="model-year" tabindex="0">2016</div>
+
+    <div class="vehicle-desc">
+        <div class="color" tabindex="0">Orange</div>
+        <div class="doors" tabindex="0">4 Door Sedan</div>
+        <div class="driver-class" tabindex="0">Passenger</div>
+    </div>
+</div>
+
+<div class="info-tile white">
+    <div tabindex="0">License Plate Number</div>
+    <div class="license-number" tabindex="0">LJG 8899</div>
+    <div class="status-box">
+        <div class="status gray">
+            <div class="status-info" tabindex="0">Valid</div>
+            <div class="status-icon"><img src="src/img/SVG/icon-check.svg" width="24px"></div>
+        </div>
+        <div class="expiration" tabindex="0">Expiration <span id="date" tabindex="0">12/01/23</span></div>
+    </div>
+</div>
+<div class="actions">
+    <a href="" class="button primary" onclick="" href="javascript:void(0)">Renew Registration</a>
+    <a href="" class="button secondary hide" onclick="" href="javascript:void(0)">Upsell Option</a>
+  </div>
+</div>
+<!-- end car_01 -->
+<div class="divider"></div>
+
+
+<div id="car_02" class="sub-section">
+
+    <div id="car_02" class="car-photo">
+        <img src="src/img/car-bmw-z4.png" alt="">
+    </div>
+    <div class="identifiers">
+    <div class="vehicle-make">
+        <div class="make" tabindex="0">BMW&nbsp;</div>
+        <div class="model" tabindex="0">Z4 M</div>
+
+    </div>
+
+        <div class="model-year" tabindex="0">2008</div>
+
+    <div class="vehicle-desc">
+        <div class="color" tabindex="0">Blue</div>
+        <div class="doors" tabindex="0">2 Door Coupe</div>
+        <div class="driver-class" tabindex="0">Passenger</div>
+    </div>
+  </div>
+<div class="info-tile white">
+    <div tabindex="0">License Plate Number</div>
+    <div class="license-number" tabindex="0">HLM 3566</div>
+    <div class="status-box">
+        <div class="status gray">
+            <div class="status-info" tabindex="0">Invalid</div>
+            <div class="status-icon"><img src="src/img/SVG/icon-alert.svg" width="24px"></div>
+        </div>
+        <div class="expiration" tabindex="0">Expiration <span id="date" tabindex="0">11/27/19</span></div>
+    </div>
+</div>
+<div class="actions">
+<a href="" class="button primary" onclick="" href="javascript:void(0)">Renew Registration</a>
+<a href="" class="button secondary hide" onclick="" href="javascript:void(0)">Upsell Option</a>
+</div>
+</div>
+<!-- end car_02 -->
+
+</div>
 </section>
-
+  </div>
+</div>
+</section>
+<script type="text/javascript" src="src/js/iopvanilla.js"></script>
 </body>
 </html>
