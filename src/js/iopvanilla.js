@@ -1,3 +1,14 @@
+function focusOut(id){
+   var formval = document.getElementById(id).value.length;
+    if (formval !== 0){
+      var parentel = document.getElementById(id);
+      parentel.parentElement.classList.add('focus');
+    } else {
+      var parentel = document.getElementById(id);
+      parentel.parentElement.classList.remove('focus');
+    }
+}
+
 function navToggle() {
   var element = document.getElementById("navblock");
   element.classList.toggle("hidenav");
@@ -23,7 +34,7 @@ function tabs(tabber, tabName, itemid){
   for (var i=0; i<children.length; i++) {
     children[i].classList.remove('active');
   }
-  document.getElementById(itemid).classList.add('active');
+  document.getElementById(itemid).parentElement.classList.add('active');
   var tabcontentID = tabber + "content";
 
   let tabcontent = document.getElementById(tabcontentID);
@@ -33,14 +44,3 @@ function tabs(tabber, tabName, itemid){
   }
   document.getElementById(tabName).classList.add('active');
 }
-
-/* Tabs
-$(".card").swipe( {
-     swipeLeft:function(event, direction, distance, duration, fingerCount) {
-          $(".nav-tabs li.active").next('li').find('a').tab('show');
-        },
-     swipeRight:function(event, direction, distance, duration, fingerCount) {
-          $(".nav-tabs li.active").prev('li').find('a').tab('show');
-        },
-  });
-*/

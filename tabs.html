@@ -1,0 +1,45 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>SoO Design System</title>
+  <meta name="description" content="SoO Design System">
+  <meta name="author" content="Innovate Ohio Platform">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="src/css/bootstrap.min.css">
+  <link rel="stylesheet" href="src/css/iopdstwo.css">
+
+</head>
+
+<body>
+  <section class="row gray">
+    <article class="container stripe">
+      <div class="tabwrapper" role="navigation">
+
+      <ul class="tabs large col-lg-6 col-md-6 col-sm-7 col-xs-12 ml-auto mr-auto" id="tabber1">
+        <li class="tab active"><a onclick="tabs('tabber1','item1',this.id)" id="tab1" href="javascript:void(0)">Tab 1</a></li>
+        <li class="tab"> <a onclick="tabs('tabber1','item2',this.id)" id="tab2" href="javascript:void(0)">Tab 2</a></li>
+        <li class="tab"> <a onclick="tabs('tabber1','item3',this.id)" id="tab3" href="javascript:void(0)">Tab 3</a></li>
+      </ul>
+      <div class="tab-content col-lg-6 col-md-6 col-sm-7 col-xs-12 ml-auto mr-auto" id="tabber1content">
+        <div class="tab-content-item active" id="item1" role="tabpanel">
+          Tab 1 Content
+      </div>
+        <div class="tab-content-item" id="item2" role="tabpanel">
+          Tab 2 Content
+        </div>
+        <div class="tab-content-item" id="item3" role="tabpanel">
+          Tab 3 Content
+        </div>
+      </div>
+    </div>
+    </article>
+  </section>
+
+
+<script type="text/javascript" src="src/js/iopvanilla.js"></script>
+</body>
+</html>
