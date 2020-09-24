@@ -17,7 +17,7 @@ a.hover, a:focus, button:hover, button:focus {
   outline-color:var(--lt-gray);
   text-decoration:none;
 }
-strong {
+strong, .strong {
   font-weight:var(--bold);
 }
 
@@ -393,7 +393,7 @@ button.mnavtrigger {
 /* Tabs */
 
 .tabwrapper {
-  width:100%;
+
 }
 .tabwrapper h2{
   display:flex;
@@ -402,7 +402,7 @@ button.mnavtrigger {
   align-items:center;
   margin-top:10px;
   margin-bottom:15px;
-  font-weight:var(--reg);
+  font-weight:var(--semi);
 }
 .tabwrapper h2 strong {
   margin-left:10px;
@@ -979,7 +979,20 @@ section.profile{
   background: #e2e2e2;
   margin: 50px auto;
 }
-
+.innerpage-banner{
+  position: relative;
+  display: flex;
+  width: 100%;
+  max-height: 250px;
+  margin-bottom: 0px;
+  background:#fff;
+  align-items:flex-end;
+  overflow: hidden;
+}
+.innerpage-banner .banner-content{
+  height:200px;
+  margin-top:20px;
+}
 .homepage-banner{
   position: relative;
   display: flex;
@@ -1688,6 +1701,11 @@ nav.topnav .rightblock li.item a:hover {
 
 @media (max-width: 36em) {
 body {min-width:320px;}
+.button {
+  padding-left:10px;
+  padding-right:10px;
+}
+
 .hide-xs {display:none !important;}
 .common-header {
   justify-content:center;
@@ -1716,8 +1734,8 @@ nav.topnav .rightblock li.item {
 }
 .feature {
   flex-wrap:nowrap;
-  padding-left:60px;
-  padding-right:60px;
+  padding-left:0px;
+  padding-right:0px;
 }
 .feature h2 {
   text-align:left;
