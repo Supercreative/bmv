@@ -411,7 +411,7 @@ button.mnavtrigger {
 /* Tabs */
 
 .tabwrapper {
-  width:100%;
+
 }
 .tabwrapper h2{
   display:flex;
@@ -420,7 +420,7 @@ button.mnavtrigger {
   align-items:center;
   margin-top:10px;
   margin-bottom:15px;
-  font-weight:var(--reg);
+  font-weight:var(--semi);
 }
 .tabwrapper h2 strong {
   margin-left:10px;
@@ -1299,8 +1299,6 @@ nav.topnav .rightblock li.item a:hover {
 }
 }
 
-@media (max-width: 36em) {
-body {min-width:320px;}
 .hide-xs {display:none !important;}
 .common-header {
   justify-content:center;
@@ -1329,8 +1327,8 @@ nav.topnav .rightblock li.item {
 }
 .feature {
   flex-wrap:nowrap;
-  padding-left:60px;
-  padding-right:60px;
+  padding-left:0px;
+  padding-right:0px;
 }
 .feature h2 {
   text-align:left;
