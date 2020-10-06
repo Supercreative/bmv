@@ -1294,46 +1294,6 @@ nav.topnav .rightblock li.item a:hover {
 .feature .button {
   max-width:280px;
 }
-.profile-card .profile {
-  padding-left:30px;
-  padding-right:30px;
-}
-
-.profile-card .license-btn-box {
-  flex:1 100%;
-  flex-direction:row;
-  margin-top:10px;
-  padding-left:0px;
-}
-.profile-card .license-btn-box .license-edit-btn {
-  margin-bottom:0px;
-  margin-right:5px;
-}
-.profile-card .profile {
-  padding:20px;
-}
-.license-btn-box > div:nth-child(2) {
-  margin-right:0px !important;
-}
-.profile-card .car-photo {
-  flex:1 15%;
-}
-.profile-card .sub-section .info-tile {
-  flex:1 100%;
-  margin-top:10px;
-}
-.profile-card .sub-section .identifiers {
-  margin-bottom:20px;
-}
-.profile-card .car-photo {
-  flex:0 50%;
-  margin-bottom:15px;
-}
-.profile-card .identifiers {
-  flex:1 100%;
-  justify-content:center;
-  align-items:center;
-}
 .section-wrapper .sub-section {
   padding:0px;
 }
