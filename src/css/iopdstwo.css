@@ -17,9 +17,6 @@ a.hover, a:focus, button:hover, button:focus {
   outline-color:var(--lt-gray);
   text-decoration:none;
 }
-strong {
-  font-weight:var(--bold);
-}
 
 body {
   margin:0px !important;
@@ -44,6 +41,11 @@ header.row {
   max-width:1440px;
 }
 
+.page-container{
+  width: 100%;
+  max-width: 1250px;
+  margin: 0 auto;
+}
 /* Layout */
 .page-header {
   background:var(--bmv-blue);
@@ -90,7 +92,7 @@ nav.topnav {
   justify-content:center;
   align-items:center;
   background:#fff;
-  padding: 0 15px 0 15px;
+  padding: 0 30px;
 }
 nav.topnav ul {
   padding:0px;
@@ -137,18 +139,31 @@ nav.topnav li {
       color:var(--black);
       height:100%;
       width:100%;
+      padding: 0 10px;
       display:flex;
       justify-content:center;
       align-items:center;
       position:relative;
+  }
+  nav.topnav .navblock .item a::after {
+    content:"fiber_manual_record";
+    font-family:"Material Icons";
+    font-size:12px;
+    position:absolute;
+    bottom: -2px;
+    opacity: 0;
+    color:var(--bmv-red);
+    transition: all .2s ease-in-out;
   }
   nav.topnav .navblock .item a:hover::after {
     content:"fiber_manual_record";
     font-family:"Material Icons";
     font-size:12px;
     position:absolute;
-    padding-top:45px;
+    bottom: 0;
+    opacity: 1;
     color:var(--bmv-red);
+    transition: all .2s ease-in-out;
   }
 nav.topnav .rightblock {
   display:flex;
@@ -171,6 +186,9 @@ nav.topnav .rightblock li.item a{
   align-items:center;
   height:44px;
   width:44px;
+  background: #ffffff;
+  border-radius: 22px;
+  transition: all .2s ease-in-out;
 }
 nav.topnav .rightblock li.item a:hover {
   background:var(--lt-gray);
@@ -656,172 +674,12 @@ form .alert.severe ul {
 /* End Forms */
 
 
-/* Profile */
-.profile-spacer {
-  margin-bottom:60px;
-}
-.profile-card {
-  display:flex;
-  flex-wrap:wrap;
-  flex-direction:row;
-  margin-top:20px;
-  padding:0px;
-  border-top-left-radius:16px;
-  border-top-right-radius:16px;
-  box-shadow:1px 1px 2px rgba(0,0,0,.2);
+/*////////////////////////////
+    Profile page 
+////////////////////////////*/
 
-}
-.profile-card .profile {
-  flex-wrap:wrap;
-  flex-direction:row;
-  padding-bottom:30px;
-}
-.profile-card section {
-  display:flex;
-  flex:1;
-  flex-wrap:wrap;
-}
-.profile-card .license-btn-box {
-  flex-direction:column;
-  flex:1 40%;
-  margin-top:0px;
-  padding-left:20px;
-}
-.profile-card .license-btn-box .license-edit-btn {
-  display:flex;
-  flex:1 100%;
-  width:inherit;
-  height:inherit;
-  margin:0px;
-  margin-bottom:5px;
-  flex-direction:column;
-}
-.license-btn-box > div:nth-child(2) {
-  margin-bottom:0px !important;
-}
-.profile-card .name {
-  display:flex;
-  flex:1 100%;
-  flex-direction:row;
-  align-items:flex-start;
-  justify-content:center;
-  padding-bottom:20px;
-}
-.profile-card .name span {
-  margin-right:5px;
-}
-.profile-card .info-tile {
-  flex:1 60%;
-  display:flex;
-  margin:0px;
-}
-.subpage-header {
-  border-top-left-radius:16px;
-  border-top-right-radius:16px;
-}
-.profile-card .sub-header {
-  flex:1 100%;
-}
-.profile-card .status {
-  justify-content:flex-start;
-  position:relative;
-  padding-left:10px;
-}
-.profile-card .status-icon {
-  margin:0px;
-  position:absolute;
-  right:5px;
-}
-.profile-card .section-wrapper {
-  flex:1 100%;
-  padding-bottom:20px;
-  padding-left:0px;
-  padding-right:0px;
-  padding-top:0px;
-  flex-direction:column;
-  flex-wrap:wrap !important;
-    background:var(--white) !important;
-}
-.profile-card .sub-section {
-  flex-wrap:wrap !important;
-  flex-direction:row;
-  display:flex;
-  flex:1 100%%;
-  justify-content:center;
-  padding:20px 30px 0px 30px;
-  margin-bottom:0px;
-  background:var(--white);
-}
-.profile-card .vehicle-make, .profile-card .vehicle-desc {
-  flex:1 100% !important;
-  display:flex;
-  align-items:flex-start;
-  max-height:40px;
-}
-.profile-card .car-photo {
-  flex:0 15%;
-  display:flex;
-  align-items:flex-start;
-}
-.profile-card .vehicle-desc {
-  height:30px;
-}
-.profile-card .sub-section .info-tile {
-  flex:1 35%;
-  display:flex;
-  padding-top:10px;
-  margin-top:-20px;
-  align-items:center;
-  background:var(--lt-gray) !important;
-}
-.profile-card .sub-section .car-photo img {
-  width:100%;
-  height:auto;
-}
-.profile-card .identifiers {
-  display:flex;
-  flex:1 35%;
-  align-items:flex-start;
-  flex-direction:column;
-  margin-left:5%;
-  margin-right:5%;
-}
-.profile-card .button {
-  flex:1 20%;
-  display:flex;
-  margin-left:auto;
-  margin-right:auto;
-  margin-top:15px;
-}
-.profile-card .divider {
-  margin:30px auto;
-}
-.profile-card .actions {
-  display:flex;
-  flex:1 100%;
-  justify-content:center;
-}
-.profile-card .car-details {
-
-  }
-.content-band-full{
-  width: 100%;
-  margin: 50px 0;
-
-}
-
-.sub-header{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 80px;
-  border-radius: 16px 16px 0 0;
-  padding: 0 20px;
-  background: black;
-}
 .subpage-header{
   display: flex;
-  flex:1 100%;
   justify-content: space-between;
   align-items: center;
   height: 80px;
@@ -845,18 +703,37 @@ form .alert.severe ul {
   border-radius: 50%;
   background: var(--bmv-red);
 }
+a.btn-primary{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 44px;
+  width: 100%;
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 0;
+  text-decoration: none;
+  color: white;
+  border-radius: 25px;
+  background: var(--bmv-red);
+}
+a.btn-primary:hover{
+  color: white;
+}
+
 section.profile{
   display: flex;
   flex-direction: column;
   margin-top: -13px;
-  padding: 30px 20px 60px;
+  padding: 30px 20px 40px;
   border-radius: 16px 16px 0 0;
   background: white;
 }
 .name{
   text-align: center;
   font-weight: 600;
-  font-size: 40px;
+  font-size: 36px;
   line-height: 36px;
 }
 .info-tile{
@@ -865,11 +742,12 @@ section.profile{
   text-align: center;
   padding: 20px 0;;
   margin: 15px 0;
-  border-radius: 10px;
+  border-radius: 10px
 }
 .license-number{
-  font-size: 36px;
+  font-size: 30px;
   font-weight: 700;
+  line-height: 37px;
 }
 .status-box{
   display: flex;
@@ -884,15 +762,22 @@ section.profile{
   height: 36px;
   width: 100px;
   margin-right: 10px;
+  padding: 0 0 0 5px;
   border-radius: 20px;
+  background: white;
 }
 .status-info{
   line-height: 0;
+  padding: 0 5px;
 }
-.status-icon{
+.status-icon {
   display: inline-block;
-  margin: 4px 5px 0 9px;
+  margin: 0px 6px 0 8px;
 }
+section.profile > .info-tile{
+background: var(--lt-gray);
+}
+
 .license-btn-box{
   display: flex;
   justify-content: space-between;
@@ -937,14 +822,37 @@ section.profile{
   padding: 0 20px;
   background: black;
 }
+.vehicle-card{
+  display: flex;
+  flex-direction: column;
+  margin-top: -13px;
+  border-radius: 16px 16px 0 0;
+  padding: 40px 20px;
+  background: var(--lt-gray);
+}
+.vehicle-card > .info-tile{
+background: white;
+}
+.vehicle-card > .info-tile > .status-box > .status{
+background: var(--lt-gray);
+}
 
+
+.car-photo{
+  display: flex;
+  justify-content: center;
+  margin: 0 0 20px 0;
+}
+.vehicle-info-box-title{
+  display: none;
+}
 .vehicle-make {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  font-size: 36px;
+  font-size: 30px;
   font-weight: 700;
   line-height: 30px;
 }
@@ -973,20 +881,36 @@ section.profile{
   padding-right: 0;
   border-right: 0;
 }
+.btn-box{
+  display: flex;
+  flex: 1 20%;
+  flex-direction: column;
+}
 .divider{
   width: 80%;
   height: 1px;
-  background: #e2e2e2;
-  margin: 50px auto;
+  background: #d2d2d2;
+  margin: 30px auto;
 }
+.btn-blue {
+  border-color: #1f42ab;
+  color: #1f42ab!important;
+  background: transparent!important;
+}
+.btn-outline {
+  border: 3px solid;
+}
+/* END PROFILE */
+
+
+/* HOME PAGE */
+
 
 .homepage-banner{
   position: relative;
   display: flex;
   width: 100%;
-  max-height: 450px;
-  margin-bottom: 20px;
-
+  max-height: 420px;
   overflow: hidden;
 }
 .banner-content{
@@ -994,8 +918,7 @@ section.profile{
   flex-direction: column;
   justify-content: center;
   width: 500px;
-  height: 275px;
-  margin: 70px 0 0 65px;
+  margin: 80px 0 0 40px;
 }
 .banner-title{
   position: relative;
@@ -1006,15 +929,15 @@ section.profile{
   margin-bottom: 30px;
 }
 .banner-title::after{
-    content: '';
-    position: absolute;
-    left: -26px;
-    top: -14px;
-    width: 45px;
-    height: 45px;
-    clip-path: ellipse(16% 16% at 19% 24%);
-    background: var(--bmv-red);
-    z-index: 0;
+  content: '';
+  position: absolute;
+  left: -26px;
+  top: -14px;
+  width: 45px;
+  height: 45px;
+  clip-path: ellipse(16% 16% at 19% 24%);
+  background: var(--bmv-red);
+  z-index: 0;
 }
 
 .banner-title > span{
@@ -1035,7 +958,7 @@ section.profile{
   z-index: 0;
 }
 input.search-field{
-  width: 322px;
+  width: 340px;
   height: 40px;
   padding: 0 20px 0 50px;
   border: 0;
@@ -1070,23 +993,23 @@ input.search-field::placeholder{
   margin: 10px 10px 0 0;
   background: var(--bmv-red);
 }
-
-
-
 .clip-mask{
   display: flex;
   align-items: flex-start;
   width: 100%;
-  height: 500px;
+  height: 460px;
   clip-path: ellipse(66% 99% at 40% -9%);
-  background: url(../img/header-photo.jpg) top right no-repeat #1f42ab;
+  background-color: #1f42ab;
+  background-repeat: no-repeat;
+  background-image: url(../img/header-photo.jpg);
+  background-position: 100% 25%;
   z-index: 1;
 }
 .red-swoosh{
   position: absolute;
   right: 0;
   width: 70%;
-  height: 500px;
+  height: 460px;
   clip-path: ellipse(81% 62% at 24% 28%);
   background: var(--bmv-red);
   z-index: 0;
@@ -1102,8 +1025,6 @@ input.search-field::placeholder{
   -webkit-transform: translateZ(1px)
 
 }
-
-
 .register-ribbon{
   display: flex;
   align-items: center;
@@ -1171,13 +1092,8 @@ a.reg-btn-solid, a.reg-btn-solid:hover{
 .title-lrg{
   font-size: 34px;
   font-weight: 700;
-  margin: 40px 55px 20px;
+  margin: 40px 40px 20px;
   line-height: 36px;
-}
-.homeNav{
-  width: 100%;
-  height: 100px;
-  background: white;
 }
 .container{
   width: 100%;
@@ -1188,18 +1104,15 @@ a.reg-btn-solid, a.reg-btn-solid:hover{
 .container > .tile-row{
   display: flex;
   flex-wrap: wrap;
-  /* flex-direction: row;
-  justify-content: space-around; */
-
+  margin-bottom: 40px;
 }
-a.tile{
+a.tile {
   display: block;
   position: relative;
   width: 32%;
   min-height: 210px;
-  padding: 30px 0;
+  padding: 30px;
   margin: 20px;
-  text-decoration: none;
   border-radius: 4px;
   background: white;
   overflow: hidden;
@@ -1212,6 +1125,7 @@ a.tile::after{
   content: '';
   position: absolute;
   top: -8px;
+  left: 0;
   width: 100%;
   height: 8px;
   background: var(--bmv-blue);
@@ -1221,6 +1135,7 @@ a.tile:hover::after {
   content: '';
   position: absolute;
   top: 0;
+  left: 0;
   width: 100%;
   height: 8px;
   background: var(--bmv-blue);
@@ -1231,16 +1146,16 @@ a.tile:hover{
 }
 .tile-icon{
   position: absolute;
-  top: 40px;
-  right: 30px;
+  top: 32px;
+  right: 26px;
 }
 a.tile > .title{
-  max-width: 241px;
+  max-width: 182px;
   font-size: 28px;
   color: black;
   font-weight: 700;
   line-height: 34px;
-  padding: 0 0 20px 40px;
+  padding: 0 0 15px 0;
 }
 a.tile > .title::after{
   content: '';
@@ -1255,277 +1170,15 @@ a.tile > .title::after{
   transition: all .25s ease-in-out;
 }
 .tile-desciption{
-  padding: 0 40px;
   color: black;
 }
-
-@media (max-width: 1200px){
-  a.tile > .title {
-    max-width: 210px;
-    font-size: 25px;
-    color: black;
-    font-weight: 700;
-    background: white;
-    line-height: 30px;
-    padding: 0 0 20px 30px;
-  }
-  .tile-icon {
-    position: absolute;
-    top: 28px;
-    right: 25px;
-    transform: scale(.8);
-  }
-  .tile-desciption {
-    padding: 0 30px;
-    color: black;
-  }
-}
-
-@media (max-width: 992px){
-  a.tile{
-    display: block;
-    position: relative;
-    width: 32%;
-    min-height: 210px;
-    padding: 30px 0;
-    margin: 20px;
-    text-decoration: none;
-    border-radius: 4px;
-    background: white;
-    overflow: hidden;
-    transition: all .3s ease-in-out;
-    flex-grow: 2;
-    flex-shrink: 0;
-    flex-basis: 25%;
-  }
-a.tile > .title {
-  max-width: 210px;
-  font-size: 25px;
-  color: black;
-  font-weight: 700;
-  background: white;
-  line-height: 30px;
-  padding: 0 0 20px 30px;
-}
-.tile-icon {
-  position: absolute;
-  top: 28px;
-  right: 25px;
-  transform: scale(.8);
-  }
-}
-@media (max-width: 768px){
-
-  a.tile{
-    display: block;
-    position: relative;
-    width: 32%;
-    min-height: 210px;
-    padding: 30px 0;
-    margin: 20px;
-    text-decoration: none;
-    border-radius: 4px;
-    background: white;
-    overflow: hidden;
-    transition: all .3s ease-in-out;
-    flex-grow: 2;
-    flex-shrink: 0;
-    flex-basis: 35%;
-  }
-  .register-ribbon {
-    display: flex;
-    align-items: center;
-    padding: 5px 50px;
-  }
-  .reg-img-box {
-    position: relative;
-    width: 250px;
-    height: 145px;
-    z-index: 0;
-  }
-  .reg-text-box {
-    width: 299px;
-    font-weight: 700;
-    font-size: 25px;
-    line-height: 20px;
-    margin: 0 19px;
-  }
-  .reg-text-box >span {
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 30px;
-  }
-  a.reg-btn-outline, a.reg-btn-outline:hover {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 44px;
-    width: 210px;
-    padding: 0 20px;
-    border-radius: 24px;
-    border: 4px solid var(--bmv-red);
-    color: var(--bmv-red);
-    font-weight: 600;
-  }
-}
-@media (min-width: 768px){
-  .container {
-    width: 100%!important;
-}
-}
-
-@media (max-width: 576px){
-.homepage-banner {
-  position: relative;
-  display: flex;
-  width: 100%;
-  max-height: 365px;
-  margin-bottom: 0px;
-  overflow: hidden;
-}
-.banner-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-  height: 275px;
-  margin: 40px 0 0 0;
-  text-align: center;
-}
-.banner-title {
-  position: relative;
-  font-size: 36px;
-  line-height: 36px;
-  font-weight: 400;
-  color: white;
-  margin-bottom: 10px;
-}
-.banner-title::after {
-  content: '';
-  position: absolute;
-  left: 75px;
-  top: -10px;
-  width: 35px;
-  height: 35px;
-  clip-path: ellipse(16% 16% at 19% 24%);
-  background: var(--bmv-red);
-  z-index: 0;
-}
-.home-search {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-input.search-field {
-  width: 288px;
-  height: 40px;
-  padding: 0 20px 0 50px;
-  border: 0;
-  border-radius: 30px;
-  margin: 10px 5px 0 0;
-  outline: none;
-}
-.search-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 115px;
-  height: 40px;
-  border-radius: 28px;
-  color: white;
-  font-size: 16px;
-  font-weight: 600;
-  margin: 20px 10px 0 0;
-  background: var(--bmv-red);
-}
-.clip-mask {
-  display: flex;
-  align-items: flex-start;
-  width: 100%;
-  height: 440px;
-  clip-path: ellipse(116% 87% at 46% -9%);
-  background: url(../img/header-photo.jpg) top right no-repeat #1f42ab;
-  z-index: 1;
-}
-.red-swoosh {
-  position: absolute;
-  right: 0;
-  width: 100%;
-  height: 436px;
-  clip-path: ellipse(111% 60% at 26% 23%);
-  background: var(--bmv-red);
-  z-index: 0;
-}
-.title-lrg {
-  font-size: 27px;
-  font-weight: 700;
-  margin: 40px 30px 20px;
-  line-height: 30px;
-}
-a.tile {
-  display: block;
-  position: relative;
-  width: 40%;
-  min-height: 210px;
-  padding: 30px 0;
-  margin: 10px 0;
-  border-radius: 4px;
-  background: white;
-  overflow: hidden;
-  transition: all .3s ease-in-out;
-  flex-grow: 2;
-  flex-shrink: 0;
-  flex-basis: 60%;
-}
-.content-band-full {
-  width: calc(100% - 40px);
-  margin: 30px 20px;
-}
-.register-ribbon {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 30px 0;
-}
-.reg-img-box {
-  position: relative;
-  width: 178px;
-  height: 145px;
-  z-index: 0;
-}
-.reg-text-box {
-  width: 240px;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 23px;
-  margin: 12px 0px;
-  text-align: center;
-}
-.reg-text-box >span {
-  font-size: 19px;
-  line-height: 27px;
-}
-a.reg-btn-outline, a.reg-btn-outline:hover {
-  width: auto;
-}
-
-
-}
-/*//// END JESSE CSS //////////////////////////////*/
-=======
-.divider {
-  height:1px;
-  width:90%;
-  margin-left:auto;
-  margin-right:auto;
-  background:#eaeaea;
-}
-
 /* End Profile */
 
-@media (max-width: 62em) {
+
+
+
+
+@media (max-width: 62em) {/* 992px */
 
 nav.topnav {
   justify-content:flex-start;
@@ -1728,28 +1381,668 @@ nav.topnav .rightblock li.item {
 .feature p {
   margin-bottom:10px;
 }
-.profile-card .profile {
-  padding:20px;
-}
-.profile-card .profile .name {
-  flex-direction:column;
-  align-items:center;
-}
-.profile-card .profile .name .first {
-  flex-direction:row;
-}
-.profile-card .profile .info-tile {
-  flex:1 100%;
-}
-.profile-card .profile .license-btn-box {
-  flex-direction:column;
-}
-.profile-card .profile .license-btn-box .license-edit-btn {
-  margin-bottom:10px;
-  margin-right:0px;
-}
 form {
   padding-left:10px;
   padding-right:10px;
 }
+}
+
+
+/*////////////////////////////////////////
+    MEDIA QUERIES 
+/////////////////////////////////////////*/
+/* Small devices (mobile) */
+@media (max-width: 575px) {  
+  .homepage-banner {
+    position: relative;
+    display: flex;
+    width: 100%;
+    max-height: 365px;
+    margin-bottom: 0px;
+    overflow: hidden;
+  }
+  .banner-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 275px;
+    margin: 40px 0 0 0;
+    text-align: center;
+  }
+  .banner-title {
+    position: relative;
+    font-size: 36px;
+    line-height: 36px;
+    font-weight: 400;
+    color: white;
+    margin-bottom: 10px;
+  }
+  .banner-title::after {
+    content: '';
+    position: absolute;
+    left: 137px;
+    top: -10px;
+    width: 35px;
+    height: 35px;
+    clip-path: ellipse(16% 16% at 19% 24%);
+    background: var(--bmv-red);
+    z-index: 0;
+  }
+  .home-search {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  input.search-field {
+    width: 300px;
+    height: 40px;
+    padding: 0 20px 0 50px;
+    border: 0;
+    border-radius: 30px;
+    margin: 10px 5px 0 0;
+    outline: none;
+  }
+  .search-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 115px;
+    height: 40px;
+    border-radius: 28px;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 20px 10px 0 0;
+    background: var(--bmv-red);
+  }
+  .clip-mask {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    height: 440px;
+    clip-path: ellipse(116% 87% at 46% -9%);
+    background: #1f42ab;
+    z-index: 1;
+  }
+  .red-swoosh {
+    position: absolute;
+    right: 0;
+    width: 100%;
+    height: 436px;
+    clip-path: ellipse(111% 60% at 26% 23%);
+    background: var(--bmv-red);
+    z-index: 0;
+  }
+  .title-lrg {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 40px 30px 20px;
+    line-height: 32px;
+  }
+  a.tile {
+    display: block;
+    position: relative;
+    width: 40%;
+    min-height: 210px;
+    padding: 30px;
+    margin: 10px 0;
+    border-radius: 4px;
+    background: white;
+    overflow: hidden;
+    transition: all .3s ease-in-out;
+    flex-grow: 2;
+    flex-shrink: 0;
+    flex-basis: 60%;
+}
+.content-band-full {
+  width: calc(100% - 40px);
+  margin: 30px 20px;
+}
+.register-ribbon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 30px 0;
+}
+.reg-img-box {
+  position: relative;
+  width: 178px;
+  height: 145px;
+  z-index: 0;
+}
+.reg-text-box {
+  width: 240px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 23px;
+  margin: 12px 0px;
+  text-align: center;
+}
+.reg-text-box >span {
+  font-size: 19px;
+  line-height: 27px;
+}
+a.reg-btn-outline, a.reg-btn-outline:hover {
+  width: auto;
+}
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {  
+  a.tile{
+    display: block;
+    position: relative;
+    width: 32%;
+    min-height: 210px;
+    padding: 30px;
+    margin: 10px;
+    text-decoration: none;
+    border-radius: 4px;
+    background: white;
+    overflow: hidden;
+    transition: all .3s ease-in-out;
+    flex-grow: 2;
+    flex-shrink: 0;
+    flex-basis: 35%;
+  }
+  .tile-icon {
+    position: absolute;
+    top: 26px;
+    right: 20px;
+    transform: scale(0.8);
+}
+  .homepage-banner {
+    position: relative;
+    display: flex;
+    width: 100%;
+    max-height: 375px;
+    overflow: hidden;
+}
+  .clip-mask {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    height: 400px;
+    clip-path: ellipse(106% 98% at 36% -7%);
+    background-color: #1f42ab;
+    background-repeat: no-repeat;
+    background-image: url(../img/header-photo.jpg);
+    background-position: 100% 25%;
+    z-index: 1;
+}
+  .red-swoosh {
+    position: absolute;
+    right: 0;
+    width: 95%;
+    height: 460px;
+    clip-path: ellipse(107% 48% at 55% 32%);
+    background: var(--bmv-red);
+    z-index: 0;
+}
+  .reg-text-box {
+    width: 170px;
+    margin: 0 30px;
+  }
+}
+/* (IPAD, 768px and up) */
+@media (min-width: 768px) { 
+  .title-lrg {
+    font-size: 34px;
+    font-weight: 700;
+    margin: 40px 40px 20px;
+    line-height: 36px;
+}
+  a.tile{
+    display: block;
+    position: relative;
+    width: 32%;
+    min-height: 210px;
+    padding: 30px;
+    margin: 10px;
+    text-decoration: none;
+    border-radius: 4px;
+    background: white;
+    overflow: hidden;
+    transition: all .3s ease-in-out;
+    flex-grow: 2;
+    flex-shrink: 0;
+    flex-basis: 35%;
+  }
+  .tile-icon {
+    position: absolute;
+    top: 32px;
+    right: 26px;
+}
+  .register-ribbon {
+    display: flex;
+    align-items: center;
+    padding: 5px 50px;
+  }
+  .reg-img-box {
+    width: 200px;
+  }
+  .reg-text-box {
+    width: 210px;
+    font-size: 25px;
+  }
+  .reg-text-box >span {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+  }
+  a.reg-btn-outline, a.reg-btn-outline:hover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 44px;
+    width: 210px;
+    padding: 0 20px;
+    border-radius: 24px;
+    border: 4px solid var(--bmv-red);
+    color: var(--bmv-red);
+    font-weight: 600;
+  }
+  .homepage-banner {
+    position: relative;
+    display: flex;
+    width: 100%;
+    max-height: 380px;
+    overflow: hidden;
+}
+  .clip-mask {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    height: 400px;
+    clip-path: ellipse(83% 103% at 41% -9%);
+    background-color: #1f42ab;
+    background-repeat: no-repeat;
+    background-image: url(../img/header-photo.jpg);
+    background-position: 100% 25%;
+    z-index: 1;
+}
+  .red-swoosh {
+    position: absolute;
+    right: 0;
+    width: 95%;
+    height: 460px;
+    clip-path: ellipse(69% 50% at 50% 32%);
+    background: var(--bmv-red);
+    z-index: 0;
+}
+  .container {
+    width: 100%!important;
+  }
+}
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+  a.tile{
+    display: block;
+    position: relative;
+    width: 32%;
+    min-height: 210px;
+    padding: 30px;
+    margin: 10px;
+    text-decoration: none;
+    border-radius: 4px;
+    background: white;
+    overflow: hidden;
+    transition: all .3s ease-in-out;
+    flex-grow: 2;
+    flex-shrink: 0;
+    flex-basis: 25%;
+  }
+  .tile-icon {
+    position: absolute;
+    top: 32px;
+    right: 26px;
+    transform: scale(0.8);
+}
+  .divider {
+    height: 0px;
+    margin: 30px auto;
+  }
+  .subpage-header{
+    margin-top: 30px;
+    height: 50px;
+    border-radius: 16px 16px 0 0;
+  }
+  .subpage-icon{
+    display: none;
+  }
+  .subpage-title{
+    font-size: 18px;
+  }
+  section.profile {
+    display: flex;
+    flex-direction: row;
+    margin: 15px 0 30px 0;
+    padding: 20px!important;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0 0 32px -6px rgba(0,0,0,0.05);
+  }
+  section.profile > .info-tile{
+    background: white;
+  }
+  section.profile > .info-tile > .status-box > .status{
+    background: var(--lt-gray);
+  }
+
+  .name {
+    display: flex;
+    flex-direction: column;
+    flex: 1 16%;
+    align-items: flex-start;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 30px;
+    text-align: left;
+    line-height: 36px;
+    padding: 0 30px 0 40px;
+  }
+  section.profile > .info-tile {
+    display: flex;
+    flex: 1 14%;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 0;
+    margin: 0;
+    border-radius: 10px;
+  }
+  .status-box {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 20px;
+  }
+  .license-btn-box {
+    display: flex;
+    flex: 1 10%;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 10px;
+  }
+  .license-edit-btn {
+    position: relative;
+    width: 100%;
+    height: 68px;
+    margin: 0;
+    border-radius: 10px;
+    background: #f6f6f6;
+  }
+  .license-edit-btn > div:nth-child(1) {
+    padding: 10px 0 0 20px;
+  }
+  .license-btn-box > div:nth-child(1) {
+    margin:0 0 10px 0px;
+  }
+  a.btn-primary {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 44px;
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 0;
+    text-decoration: none;
+    color: white;
+    border-radius: 25px;
+    background: var(--bmv-red);
+    }
+  .btn-box{
+    display: flex;
+    flex: 1 15%;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 0;
+    }
+  .sub-header{
+      height: 50px;
+  }
+  .vehicle-card {
+    display: flex;
+    flex-direction: row;
+    margin-top: 13px;
+    border-radius: 10px;
+    padding: 30px 20px;
+    background: #e8e8e8;
+  }
+  .car-photo {
+    display: flex;
+    flex: 1 50%;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    margin: 0;
+  }
+  .car-photo > img {
+    height: 75px;
+  }
+  .vehicle-card > .info-tile{
+    background: transparent;
+  }
+  .btn-primary{
+    min-width: 262px;
+  }
+  .vehicle-info-box{
+    flex: 1 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 0 0 30px;
+  }
+  .vehicle-info-box-title{
+    display: block;
+    padding-bottom: 5px;
+  }
+  .vehicle-card > .info-tile{
+    display: flex;
+    flex: 1 70%;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+    margin: 0;
+    border-radius: 10px;
+  }
+  .vehicle-card > .info-tile > .status-box > .status{
+    background: white;
+  }
+}
+
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {  
+  a.tile{
+    display: block;
+    position: relative;
+    width: 32%;
+    min-height: 210px;
+    padding: 30px;
+    margin: 15px;
+    text-decoration: none;
+    border-radius: 4px;
+    background: white;
+    overflow: hidden;
+    transition: all .3s ease-in-out;
+    flex-grow: 2;
+    flex-shrink: 0;
+    flex-basis: 25%;
+  }
+  a.tile > .title {
+    max-width: 182px;
+    font-size: 28px;
+    color: black;
+    font-weight: 700;
+    background: white;
+    line-height: 34px;
+    padding: 0 0 15px 0;
+}
+  .tile-desciption {
+    color: black;
+  }
+
+  .tile-icon {
+    position: absolute;
+    top: 32px;
+    right: 26px;
+    transform: scale(1);
+}
+  .divider {
+    height: 0px;
+    margin: 30px auto;
+  }
+  .subpage-header{
+    margin-top: 30px;
+    height: 50px;
+    border-radius: 16px 16px 0 0;
+  }
+  .subpage-icon{
+    display: none;
+  }
+  .subpage-title{
+    font-size: 18px;
+  }
+  section.profile {
+    display: flex;
+    flex-direction: row;
+    margin: 15px 0 30px 0;
+    padding: 20px!important;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0 0 32px -6px rgba(0,0,0,0.05);
+  }
+  section.profile > .info-tile{
+    background: white;
+  }
+  section.profile > .info-tile > .status-box > .status{
+    background: var(--lt-gray);
+  }
+
+  .name {
+    display: flex;
+    flex-direction: column;
+    flex: 1 16%;
+    align-items: flex-start;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 34px;
+    text-align: left;
+    line-height: 36px;
+    padding: 0 30px 0 40px;
+  }
+  section.profile > .info-tile {
+    display: flex;
+    flex: 1 14%;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 0;
+    margin: 0;
+    border-radius: 10px;
+  }
+  .status-box {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 20px;
+  }
+  .license-btn-box {
+    display: flex;
+    flex: 1 10%;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 10px;
+  }
+  .license-edit-btn {
+    position: relative;
+    width: 100%;
+    height: 68px;
+    margin: 0;
+    border-radius: 10px;
+    background: #f6f6f6;
+  }
+  .license-edit-btn > div:nth-child(1) {
+    padding: 10px 0 0 20px;
+  }
+  .license-btn-box > div:nth-child(1) {
+    margin:0 0 10px 0px;
+  }
+  a.btn-primary {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 44px;
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 0;
+    text-decoration: none;
+    color: white;
+    border-radius: 25px;
+    background: var(--bmv-red);
+    }
+  .btn-box{
+    display: flex;
+    flex: 1 15%;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 0 25px;
+    }
+  .sub-header{
+      height: 50px;
+  }
+  .vehicle-card {
+    display: flex;
+    flex-direction: row;
+    margin-top: 13px;
+    border-radius: 10px;
+    padding: 30px 20px;
+    background: #e8e8e8;
+  }
+  .car-photo {
+    display: flex;
+    flex: 1 50%;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    margin: 0;
+  }
+  .car-photo > img {
+    height: 75px;
+  }
+  .vehicle-card > .info-tile{
+    background: transparent;
+  }
+  .btn-primary{
+    min-width: 262px;
+  }
+  .vehicle-info-box{
+    flex: 1 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 0 0 30px;
+  }
+  .vehicle-info-box-title{
+    display: block;
+    padding-bottom: 5px;
+  }
+  .vehicle-card > .info-tile{
+    display: flex;
+    flex: 1 70%;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+    margin: 0;
+    border-radius: 10px;
+  }
+  .vehicle-card > .info-tile > .status-box > .status{
+    background: white;
+  }
 }
