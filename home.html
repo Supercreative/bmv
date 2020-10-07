@@ -7,13 +7,30 @@
 
     <link rel="stylesheet" href="src/css/bootstrap.min.css">
     <link rel="stylesheet" href="src/css/iopdstwo.css">
-    
+
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
-   
+  <nav class="topnav" role="navigation" aria-label="agencyname main navigation">
+    <a class="logo" href="#"><img src="src/img/bmv-main-logo-large.png"></a>
+    <button class="mnavtrigger" type="button" onclick="navToggle()" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="material-icons">menu</i>
+    </button>
+    <ul class="navblock hidenav hideme" role="menubar" aria-label="agencyname primary links" id="navblock">
+      <li class="mnavclose"><a onclick="navToggle()" href="javascript:void(0)"><i class="material-icons">keyboard_backspace</i></a></li>
+      <li class="item" role="none"><a href="#" tabindex="0" role="menuitem">myBMV</a></li>
+      <li class="item" role="none"><a href="#" tabindex="0" role="menuitem">oPlates</a></li>
+      <li class="item" role="none"><a href="#" tabindex="0" role="menuitem">Drivers License</a></li>
+      <li class="item" role="none"><a href="#" tabindex="0" role="menuitem">Other Services</a></li>
+      <li class="item" role="none"><a href="#" tabindex="0" role="menuitem">Extra Link</a></li>
+    </ul>
+    <ul class="rightblock" role="menubar" aria-label="search and profile links">
+      <li class="item" role="none"><a class="item" href="javascript:void(0)"><i class="material-icons">search</i></li></a>
+      <li class="item" role="none"><a class="item" href="javascript:void(0)"><i class="material-icons">person</i></li></a>
+    </ul>
+  </nav>
 <div class="homepage-banner">
 
     <div class="clip-mask">
@@ -22,7 +39,7 @@
                 <div class="banner-title">The BMV<br><span>just got easier!</span></div>
                 <div class="banner-subtitle">
                     Let us help you get from A to B
-                </div>    
+                </div>
                 <div class="home-search">
                     <div class="search-container">
                         <input class="search-field" type="text" placeholder="What are you looking for?">
@@ -51,21 +68,21 @@
             <div class="title">My BMV Profile</div>
             <div class="tile-icon"><img src="src/img/SVG/icon-profile.svg" width="50" alt=""></div>
             <div class="tile-desciption">
-                Lorem ipsum dolor sit amet, dipiscing elit aliqua. 
+                Lorem ipsum dolor sit amet, dipiscing elit aliqua.
             </div>
         </a>
         <a href="#" class="tile" id="">
             <div class="title">Schedule a Driving Test</div>
             <div class="tile-icon"><img src="src/img/SVG/icon-calendar.svg" width="48" alt=""></div>
             <div class="tile-desciption">
-                Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </div>
         </a>
         <a href="#" class="tile" id="">
             <div class="title">Check Your Driving Record</div>
             <div class="tile-icon"><img src="src/img/SVG/icon-driver.svg" width="62" alt=""></div>
             <div class="tile-desciption">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. 
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
             </div>
         </a>
 
@@ -73,21 +90,21 @@
             <div class="title">Vehicle Registation</div>
             <div class="tile-icon"><img src="src/img/SVG/icon-car-outline.svg" width="56" alt=""></div>
             <div class="tile-desciption">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. 
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
             </div>
         </a>
         <a href="#" class="tile" id="">
             <div class="title">Organ Donation</div>
             <div class="tile-icon"><img src="src/img/SVG/icon-ribbon.svg" width="46" alt=""></div>
             <div class="tile-desciption">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. 
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
             </div>
         </a>
         <a href="#" class="tile" id="">
             <div class="title">More <br>Services</div>
             <div class="tile-icon"><img src="src/img/SVG/icon-add.svg" width="50" alt=""></div>
             <div class="tile-desciption">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. dolor sit amet, consectetur 
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. dolor sit amet, consectetur
             </div>
         </a>
     </div>
