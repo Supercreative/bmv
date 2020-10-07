@@ -675,7 +675,7 @@ form .alert.severe ul {
 
 
 /*////////////////////////////
-    Profile page 
+    Profile page
 ////////////////////////////*/
 
 .subpage-header{
@@ -1174,7 +1174,82 @@ a.tile > .title::after{
 }
 /* End Profile */
 
+@media (max-width: 767px){
+  a.tile{
+    display: block;
+    position: relative;
+    width: 32%;
+    min-height: 210px;
+    padding: 30px;
+    margin: 10px;
+    text-decoration: none;
+    border-radius: 4px;
+    background: white;
+    overflow: hidden;
+    transition: all .3s ease-in-out;
+    flex-grow: 2;
+    flex-shrink: 0;
+    flex-basis: 35%;
+  }
+  .tile-icon {
+    position: absolute;
+    top: 26px;
+    right: 20px;
+    transform: scale(0.8);
+  }
+  .homepage-banner {
+    position: relative;
+    display: flex;
+    width: 100%;
+    max-height: 375px;
+    overflow: hidden;
+  }
+  .clip-mask {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    height: 400px;
+    clip-path: ellipse(106% 98% at 36% -7%);
+    background-color: #1f42ab;
+    background-repeat: no-repeat;
+    background-image: url(../img/header-photo.jpg);
+    background-position: 100% 25%;
+    z-index: 1;
+  }
+  .red-swoosh {
+    position: absolute;
+    right: 0;
+    width: 95%;
+    height: 460px;
+    clip-path: ellipse(107% 48% at 55% 32%);
+    background: var(--bmv-red);
+    z-index: 0;
+  }
 
+  .register-ribbon {
+    padding-left:0px;
+    padding-right:0px;
+    justify-content:center;
+  }
+  .reg-img-box {
+    flex:1 calc(50% - 154px);
+    width:inherit;
+    max-width:178px;
+  }
+  .reg-text-box {
+    flex:1 calc(50% - 154px);
+    width:inherit;
+    margin:0px;
+    margin-left:15px;
+    font-size: 24px;
+    max-width:204px;
+  }
+  a.reg-btn-outline {
+    flex:1;
+    max-width:154px;
+    min-width:154px;
+  }
+}
 
 
 
@@ -1316,11 +1391,10 @@ nav.topnav .rightblock li.item a:hover {
   padding-right:0px;
 }
 nav.topnav .navblock {
-  min-width:100%;
+  width:100%;
 }
 nav.topnav {
-  padding-left:10px;
-  padding-right:10px;
+
 }
 nav.topnav .rightblock li.item {
   margin:0px;
@@ -1335,6 +1409,7 @@ nav.topnav .rightblock li.item {
 }
 .feature .title, .feature .action {
   flex:1 100%;
+  max-width:fit-content;
 }
 .feature p {
   margin-bottom:10px;
@@ -1347,12 +1422,12 @@ form {
 
 
 /*////////////////////////////////////////
-    MEDIA QUERIES 
+    MEDIA QUERIES
 /////////////////////////////////////////*/
 
 /* Small devices (landscape phones, 576px and up) */
 
-@media (min-width: 36em) {  
+@media (min-width: 36em) {
   a.tile{
     display: block;
     position: relative;
@@ -1409,7 +1484,7 @@ form {
   }
 }
 /* Small devices (mobile) 575px */
-@media (max-width: 575px) {  
+@media (max-width: 575px) {
     .homepage-banner {
       position: relative;
       display: flex;
@@ -1529,6 +1604,7 @@ form {
     width: 178px;
     height: 145px;
     z-index: 0;
+    flex:none;
   }
   .reg-text-box {
     width: 240px;
@@ -1544,12 +1620,13 @@ form {
   }
   a.reg-btn-outline, a.reg-btn-outline:hover {
     width: auto;
+    flex:1 44px;
   }
 }
 
 
 /* (IPAD, 768px and up) */
-@media (min-width: 48em) { 
+@media (min-width: 48em) {
   .title-lrg {
     font-size: 34px;
     font-weight: 700;
@@ -1581,6 +1658,7 @@ form {
     display: flex;
     align-items: center;
     padding: 5px 50px;
+    justify-content: center;
   }
   .reg-img-box {
     width: 200px;
@@ -1639,7 +1717,7 @@ form {
   }
 }
 /* Large devices (desktops, 992px and up) */
-@media (min-width: 62em) { 
+@media (min-width: 62em) {
   a.tile{
     display: block;
     position: relative;
@@ -1818,7 +1896,7 @@ form {
 
 
 /* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 75em) {  
+@media (min-width: 75em) {
   a.tile{
     display: block;
     position: relative;
@@ -1853,7 +1931,7 @@ form {
     top: 32px;
     right: 26px;
     transform: scale(1);
-  } 
+  }
 
 /* Profile */
   .divider {
