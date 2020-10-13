@@ -35,6 +35,15 @@
       <li class="item" role="none"><a class="item" href="javascript:void(0)"><i class="material-icons">person</i></li></a>
     </ul>
   </nav>
+  <div class="drawer md right conceal hidedrawer" id="driverrecord" tabindex="0">
+    <div class="drawer-header">
+      <div class="title" id="drtitle">Test</div>
+      <a class="close" href="javascript:void(0);" onclick="drawerToggle('driverrecord','drtrigger')">Close<i class="material-icons">cancel</i></a>
+    </div>
+    <div class="drawer-content">
+    </div>
+  </div>
+<div class="page-wrapper" id="main">
   <div class="page-container">
 
     <div class="subpage-header">
@@ -72,10 +81,9 @@
             </div>
         </div>
         <div class="btn-box">
-            <a href="" class="btn-primary btn-blue btn-outline" tabindex="0">Get Driving Record</a>
+            <a href="javascript:void(0);" class="btn-primary btn-blue btn-outline" tabindex="0" onclick="drawerToggle('driverrecord','driverrecord');" id="drtrigger">Get Driving Record</a>
             <a href="" class="btn-primary" tabindex="0">Replace Driver's License</a>
         </div>
-
 
     </section>
 <!-- END Profile -->
@@ -172,7 +180,7 @@
     <!-- </div> -->
 </section>
 </div>
-
+</div>
 
 <script type="text/javascript" src="src/js/iopvanilla.js"></script>
 </body>
