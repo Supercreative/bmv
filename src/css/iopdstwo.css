@@ -17,6 +17,10 @@ a.hover, a:focus, button:hover, button:focus {
   outline-color:var(--lt-gray);
   text-decoration:none;
 }
+div:focus, h1:focus, h2:focus, h3:focus, h4:focus {
+  outline-color:#d8d8d8;
+  outline-width:1px;
+}
 
 body {
   margin:0px !important;
@@ -46,6 +50,12 @@ header.row {
   max-width: 1250px;
   margin: 0 auto;
 }
+.page-wrapper {
+  width:100%;
+  left:0px;
+  right:0px;
+  height:auto;
+}
 /* Layout */
 .page-header {
   background:var(--bmv-blue);
@@ -69,6 +79,7 @@ header.row {
   from {opacity:1;left:0px; }
   to {opacity:0;left:-100vw;}
 }
+
 
 /* Desktop Nav */
 .common-header {
@@ -242,6 +253,15 @@ button.mnavtrigger {
   border-radius:17px;
   font-size:1.125em;
   max-width:360px;
+}
+a.btn-primary:focus {
+  outline:none;
+  border-style:double;
+    border-color:#fff;
+  border-width:6px;
+}
+a.btn-blue:focus {
+  border-color:var(--bmv-blue);
 }
 .button:hover {
   text-decoration:none;
@@ -729,6 +749,9 @@ section.profile{
   padding: 30px 20px 40px;
   border-radius: 16px 16px 0 0;
   background: white;
+}
+section.vehicle {
+  margin-bottom:30px;
 }
 .name{
   text-align: center;
@@ -1418,6 +1441,95 @@ form {
   padding-left:10px;
   padding-right:10px;
 }
+
+/* Drawers */
+.bump {
+  margin-left:0px;
+  transition: 1s ease-in-out;
+}
+.drawer {
+  background:#eaeaea;
+  position:absolute;
+  display:block;
+  min-height:100vh;
+  display:flex;
+  flex-direction:row;
+  justify-content: space-between;
+  z-index:2000;
+}
+.drawer.right {
+  left:200%;
+  top:0px;
+}
+.drawer.right.reveal {
+  transition: 1s ease-in-out .25s;
+  left:0px;
+}
+.drawer.right.conceal {
+  transition:1s ease-in-out;
+  left:200%;
+}
+.drawer.sm {
+  width: 100%;
+}
+.drawer.md {
+  width:100%;
+}
+.drawer.full {
+  width:100%;
+}
+.drawer .drawer-header {
+  width:100%;
+  padding:30px;
+  color:#000;
+  display:flex;
+  flex:1;
+  flex-direction:row;
+  flex-wrap:wrap;
+}
+.drawer .drawer-header .title {
+  display:flex;
+  flex:1 calc(100% - 100px);
+  font-size:1.25em;
+  max-height:fit-content;
+}
+.drawer .close {
+  display:flex;
+  flex:1;
+  max-width:fit-content;
+  justify-content:flex-end;
+  padding-left:10px;
+  padding-right:5px;
+  background:#fff;
+  color:#000;
+  height:24px;
+  border-radius:12px;
+  align-items:center;
+}
+.drawer .close i {
+  font-size:1.125em;
+  margin-left:5px;
+}
+.drawer .drawer-content {
+
+}
+.drawer .fixed-footer {
+
+}
+
+
+
+/* End Drawers */
+
+.overlay-back {
+  position:fixed;
+  top:0px;
+  left:0px;
+  z-index:1999;
+  width:100vw;
+  height:100vh;
+  background:rgba(0,0,0,.65);
+}
 }
 
 
@@ -1482,9 +1594,12 @@ form {
     width: 170px;
     margin: 0 30px;
   }
+
+
 }
 /* Small devices (mobile) 575px */
 @media (max-width: 575px) {
+
     .homepage-banner {
       position: relative;
       display: flex;
@@ -1718,6 +1833,15 @@ form {
 }
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 62em) {
+  .overlay-back {
+    position:fixed;
+    top:0px;
+    left:0px;
+    z-index:1999;
+    width:100vw;
+    height:100vh;
+    background:rgba(0,0,0,.65);
+  }
   a.tile{
     display: block;
     position: relative;
@@ -1892,11 +2016,61 @@ form {
   .vehicle-card > .info-tile > .status-box > .status{
     background: white;
   }
+  .drawer.sm {
+    width: 35%;
+  }
+  .drawer.md {
+    width:80%;
+  }
+  .drawer.full {
+    width:100%;
+  }
+  .bump {
+    transition: 1s ease-in-out;
+    margin-left:-100px;
+  }
+  .drawer.right.reveal {
+    transition: 1s ease-out;
+    left:20%;
+  }
+  .drawer.right.conceal {
+    transition: left 1s ease-out;
+    left:180%;
+  }
+  .hidedrawer {display:none !important;}
 }
 
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 75em) {
+  .overlay-back {
+    position:fixed;
+    top:0px;
+    left:0px;
+    z-index:1999;
+    width:100vw;
+    height:100vh;
+    background:rgba(0,0,0,.65);
+  }
+  .drawer.sm {
+    width: 25%;
+  }
+  .drawer.md {
+    width:60%;
+  }
+  .drawer.full {
+    width:100%;
+  }
+
+
+  .drawer.right.reveal {
+    transition: 1s ease-out;
+    left:40%;
+  }
+  .drawer.right.conceal {
+    transition:1s ease-out;
+    left:160%;
+  }
   a.tile{
     display: block;
     position: relative;
@@ -2085,4 +2259,35 @@ form {
   .vehicle-card > .info-tile > .status-box > .status{
     background: white;
   }
+
+  /* Product Page */
+  .product {
+    display:flex;
+    flex:1;
+    position:relative;
+    justify-content:center;
+    align-items:flex-start;
+    flex-wrap:wrap;
+    flex-direction:row;
+  }
+  .product section {
+    display:flex;
+    flex:1 100%;
+    justify-content:center;
+    align-items:flex-start;
+  }
+  .product section article {
+    background:#fff;
+    display:flex;
+    flex:1;
+    margin-top:30px;
+    max-width:1260px;
+    min-height:200px;
+    box-shadow:2px 2px 12px rgba(0,0,0,.15);
+  }
+  .product section article h1 {
+
+  }
+
+  /* End Product Page */
 }

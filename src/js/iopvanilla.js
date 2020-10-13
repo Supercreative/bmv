@@ -16,6 +16,25 @@ function navToggle() {
   setTimeout(() => {  element.classList.toggle("hideme"); }, 250);
 }
 
+
+function drawerToggle(drawerid,objectid) {
+  var element = document.getElementById(drawerid);
+  var primaryContainer = document.getElementById("main");
+
+  if (element.classList.contains("hidedrawer")){
+    element.classList.remove("hidedrawer");
+    setTimeout(() => { element.classList.toggle("reveal"); },0);
+    element.classList.toggle("conceal");
+  } else {
+    element.classList.toggle("reveal");
+    element.classList.toggle("conceal");
+    setTimeout(() => {  element.classList.add("hidedrawer"); }, 500);
+  }
+  setTimeout(() => { primaryContainer.classList.toggle("bump");}, 500);
+  setTimeout(() => { document.getElementById(objectid).focus();}, 500);
+}
+
+
 window.addEventListener("resize", function() {
 if (window.innerWidth > 992){
 if (document.getElementById("navblock") !== 'undefined'){
