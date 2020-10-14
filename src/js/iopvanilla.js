@@ -30,7 +30,7 @@ function drawerToggle(drawerid,objectid) {
     element.classList.toggle("conceal");
     setTimeout(() => {  element.classList.add("hidedrawer"); }, 500);
   }
-  setTimeout(() => { primaryContainer.classList.toggle("bump");}, 500);
+  setTimeout(() => {document.getElementById("overlay").classList.toggle("hide");}, 500);
   setTimeout(() => { document.getElementById(objectid).focus();}, 500);
 }
 
