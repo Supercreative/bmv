@@ -20,17 +20,18 @@ function navToggle() {
 function drawerToggle(drawerid,objectid) {
   var element = document.getElementById(drawerid);
   var primaryContainer = document.getElementById("main");
-
   if (element.classList.contains("hidedrawer")){
     element.classList.remove("hidedrawer");
-    setTimeout(() => { element.classList.toggle("reveal"); },0);
-    element.classList.toggle("conceal");
+    element.classList.toggle("reveal");
+    setTimeout(() => {  element.classList.add("fixtweak"); }, 1000);
+    setTimeout(() => {  element.classList.toggle("conceal"); }, 100);
   } else {
     element.classList.toggle("reveal");
     element.classList.toggle("conceal");
-    setTimeout(() => {  element.classList.add("hidedrawer"); }, 500);
+    element.classList.remove("fixtweak");
+    setTimeout(() => {  element.classList.add("hidedrawer"); }, 1000);
   }
-  setTimeout(() => {document.getElementById("overlay").classList.toggle("hide");}, 500);
+  setTimeout(() => {document.getElementById("overlay").classList.toggle("hide");}, 1000);
   setTimeout(() => { document.getElementById(objectid).focus();}, 500);
 }
 
