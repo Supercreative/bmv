@@ -1307,20 +1307,46 @@ a.tile > .title::after{
 .cart .address-block h4 {
   padding-bottom:0px;
   margin-bottom:10px;
-  font-size:14px;
+  margin-top:-10px;
+  margin-left:0px;
+  margin-right:auto;
+  font-weight:var(--reg);
+  font-size:1em;
   color:#fff;
+  max-width:fit-content;
+  padding-left:0px;
+  padding-right:5px;
+  background:var(--bmv-blue);
 }
 .cart .address-block {
   margin-top:0px;
   padding-top:0px;
+  padding-left:20px;
+  padding-right:20px;
   padding-bottom:30px;
   display:flex;
   flex:1 100%;
   flex-direction:column;
+  border:1px solid #596EF7;
+  margin-bottom:20px;
+  border-radius:8px;
+  position:relative;
 }
 .cart .address-block div {
   color:#fff;
   flex:1 100%;
+}
+.cart .address-block .edit {
+  display:flex;
+  flex:1 100%;
+}
+.cart .address-block a.button {
+  position:absolute;
+  bottom:-20px;
+  margin-left:auto;
+  margin-right:auto;
+  left:0;
+  right:0;
 }
 /* End Profile */
 
@@ -2368,6 +2394,8 @@ form {
   }
   .cart section article h2 {
     padding-top:0px;
+    margin-top:10px;
+    margin-bottom:0px;
   }
   .cart section article {
     border-radius:0px;
