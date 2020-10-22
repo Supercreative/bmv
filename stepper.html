@@ -1,0 +1,137 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SoO Design System</title>
+  <meta name="description" content="SoO Design System">
+  <meta name="author" content="Innovate Ohio Platform">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="src/css/bootstrap.min.css">
+  <link rel="stylesheet" href="src/css/iopdstwo.css">
+
+</head>
+
+<body>
+  <nav class="topnav" role="navigation" aria-label="agencyname main navigation">
+    <a class="logo" href="#"><img src="src/img/bmv-main-logo-large.png"></a>
+    <button class="mnavtrigger" type="button" onclick="navToggle()" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="material-icons">menu</i>
+    </button>
+    <ul class="navblock hidenav hideme" role="menubar" aria-label="agencyname primary links" id="navblock">
+      <li class="mnavclose"><a onclick="navToggle()" href="javascript:void(0)"><i class="material-icons">keyboard_backspace</i></a></li>
+      <li class="item" role="none"><a href="#" tabindex="0" role="menuitem">myBMV</a></li>
+      <li class="item" role="none"><a href="#" tabindex="0" role="menuitem">oPlates</a></li>
+      <li class="item" role="none"><a href="#" tabindex="0" role="menuitem">Drivers License</a></li>
+      <li class="item" role="none"><a href="#" tabindex="0" role="menuitem">Other Services</a></li>
+      <li class="item" role="none"><a href="#" tabindex="0" role="menuitem">Extra Link</a></li>
+    </ul>
+    <ul class="rightblock" role="menubar" aria-label="search and profile links">
+      <li class="item" role="none"><a class="item" href="javascript:void(0)"><i class="material-icons">search</i></li></a>
+      <li class="item" role="none"><a class="item" href="javascript:void(0)"><i class="material-icons">person</i></li></a>
+    </ul>
+  </nav>
+<div class="page-wrapper product">
+<section>
+  <article>
+    <div class="stepper">
+      <a href="profile.html" class="back"><i class="material-icons">keyboard_arrow_left</i> Back</a>
+      <h1 class="pull-circle">Product Name Could Go to Two Lines</h1>
+      <ol id="stepsA">
+        <li class="complete"><span class="wrapper"><span class="stepno">1</span></span><span class="stepname">Step Name</span></li>
+        <li class="active"><span class="wrapper"><span class="stepno">2</span></span><span class="stepname">Step Name</span></li>
+        <li><span class="wrapper"><span class="stepno">3</span></span><span class="stepname">Step Name</span></li>
+        <li><span class="wrapper"><span class="stepno">4</span></span><span class="stepname">Step Name</span></li>
+        <li class="last"><span class="wrapper"><span class="stepno">5</span></span><span class="stepname">Step Name</span></li>
+
+      </ol>
+      <div class="expander" id="etoggle"><a class="wrapper" href="javascript:void(0);" onclick="expandToggle('stepsA','etoggle')"></a></div>
+    </div>
+    <div class="stepper-content">
+    <h2 class="pull-circle">Step Name</h2>
+    <div class="step-description">Put the simple description here</div>
+    <div class="step-wrapper">
+      <div class="header">Replacement Type</div>
+      <div class="radio-wrapper">
+      <input type="radio" id="regcard" name="replacetype" value="regcardonly" checked="checked">
+      <label for="regcard">Registration Card Only</label>
+      </div>
+      <div class="radio-wrapper">
+      <input type="radio" id="sticker" name="replacetype" value="stickerandregcard">
+      <label for="sticker">Sticker with Registration Card</label>
+      </div>
+    </div>
+    <div class="step-wrapper">
+      <div class="header">Reason for Replacement</div>
+      <div class="radio-wrapper">
+      <input type="radio" id="damaged" name="reason" value="damaged">
+      <label for="damaged">Damaged</label>
+      </div>
+      <div class="radio-wrapper">
+      <input type="radio" id="lost" name="reason" value="lost">
+      <label for="lost">Lost</label>
+      </div>
+      <div class="radio-wrapper">
+      <input type="radio" id="stolen" name="reason" value="stolen">
+      <label for="stolen">Stolen</label>
+      </div>
+    </div>
+    <div class="step-wrapper">
+      <div class="header">Is this where you want your validation sticker or registration card mailed?</div>
+      <div class="description">
+        <div class="address-box">
+          <div class="street">123 Some Street</div>
+          <div class="citystatezip">Sunbury, OH 43074</div>
+        </div>
+      </div>
+      <div class="radio-wrapper">
+      <input type="radio" id="yesship" name="ship" value="newaddress">
+      <label for="yesship">Yes</label>
+      </div>
+      <div class="radio-wrapper">
+      <input type="radio" id="noship" name="ship" value="update">
+      <label for="noship">No</label>
+      </div>
+    </div>
+    <div class="step-wrapper">
+      <div class="header">Is this Vehicle Covered By Insurance or Other Financial Responsibility? </div>
+      <div class="radio-wrapper">
+      <input type="radio" id="yesinsured" name="insured" value="yesinsured">
+      <label for="yesinsured">Yes</label>
+      </div>
+      <div class="radio-wrapper">
+      <input type="radio" id="noinsure" name="insured" value="noinsure">
+      <label for="noinsure">No</label>
+      </div>
+    </div>
+
+    <div class="step-wrapper">
+      <div class="header">In Case We Need to Get In Touch</div>
+      <div class="fieldwrapper">
+      <label class="text" for="email">Email Address (optional)</label>
+      <input type="text" class="text" onblur="focusOut(this.id);" id="email" role="textbox"></input>
+      </div>
+      <div class="fieldwrapper">
+      <label class="text" for="phone">Phone Number (optional)</label>
+      <input type="text" class="text" onblur="focusOut(this.id);" id="phone" role="textbox"></input>
+      </div>
+    </div>
+    <div class="step-wrapper">
+      <div class="header">Terms &amp; Conditions</div>
+      <div class="description">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed lectus vestibulum mattis ullamcorper velit sed ullamcorper. Nisi scelerisque eu ultrices vitae. Morbi tristique senectus et netus et malesuada fames ac turpis. Amet est placerat in egestas erat. Turpis egestas sed tempus urna. Mattis ullamcorper velit sed ullamcorper. Nunc eget lorem dolor sed viverra ipsum nunc aliquet. Tempor commodo ullamcorper a lacus vestibulum sed arcu. Purus semper eget duis at tellus at urna. Orci phasellus egestas tellus rutrum tellus. Rhoncus est pellentesque elit ullamcorper. Molestie at elementum eu facilisis sed odio. Sit amet luctus venenatis lectus magna fringilla urna porttitor rhoncus. Blandit turpis cursus in hac habitasse platea dictumst quisque. Sed enim ut sem viverra aliquet eget sit amet.</p>
+        <p>Semper feugiat nibh sed pulvinar proin gravida hendrerit. Felis eget velit aliquet sagittis id consectetur purus ut faucibus. Suspendisse faucibus interdum posuere lorem ipsum dolor. Egestas pretium aenean pharetra magna ac placerat vestibulum. Ultrices tincidunt arcu non sodales neque. Diam maecenas ultricies mi eget mauris pharetra et ultrices. Eleifend donec pretium vulputate sapien nec sagittis aliquam malesuada. Tempor commodo ullamcorper a lacus vestibulum sed arcu. Velit dignissim sodales ut eu sem integer vitae justo. Eget dolor morbi non arcu risus quis varius. Nullam eget felis eget nunc lobortis. Laoreet sit amet cursus sit amet dictum. Nunc sed id semper risus in hendrerit gravida. Lorem sed risus ultricies tristique nulla aliquet enim tortor. Tellus mauris a diam maecenas sed enim ut sem. In arcu cursus euismod quis viverra nibh cras pulvinar mattis. Quisque non tellus orci ac auctor augue mauris augue. Sed felis eget velit aliquet sagittis. Dignissim suspendisse in est ante in nibh.
+        </p>
+      </div>
+      <label><input type="checkbox"> I agree to the Terms and Conditions</label>
+    </div>
+    <div class="action-bar"><a class="button secondary reverse hide">Back</a><a class="button reverse tertiary">Cancel</a><a class="button primary pull-right-flex">Continue</a></div>
+    </div>
+  </article>
+</section>
+</div>
+<script type="text/javascript" src="src/js/iopvanilla.js"></script>
+</body>
+</html>

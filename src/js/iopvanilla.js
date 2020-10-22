@@ -16,6 +16,13 @@ function navToggle() {
   setTimeout(() => {  element.classList.toggle("hideme"); }, 250);
 }
 
+function expandToggle(expandid,etoggleid){
+  var element = document.getElementById(expandid);
+  var element2 = document.getElementById(etoggleid);
+  element.classList.toggle("expanded");
+  element2.classList.toggle("twist");
+
+}
 
 function drawerToggle(drawerid,objectid) {
   var element = document.getElementById(drawerid);
@@ -34,7 +41,6 @@ function drawerToggle(drawerid,objectid) {
   setTimeout(() => {document.getElementById("overlay").classList.toggle("hide");}, 1000);
   setTimeout(() => { document.getElementById(objectid).focus();}, 500);
 }
-
 
 window.addEventListener("resize", function() {
 if (window.innerWidth > 992){
@@ -64,3 +70,19 @@ function tabs(tabber, tabName, itemid){
   }
   document.getElementById(tabName).classList.add('active');
 }
+
+window.addEventListener('scroll', function() {
+  if (window.innerWidth > 767){
+  let scrollpos = window.scrollY;
+  const header = document.getElementById("stepsA");
+
+  const add_class_on_scroll = () => header.classList.add("fixed-top");
+  const remove_class_on_scroll = () => header.classList.remove("fixed-top");
+
+    scrollpos = window.scrollY;
+
+    if (scrollpos >= 200) { add_class_on_scroll() }
+    else { remove_class_on_scroll() }
+
+  }
+  })
