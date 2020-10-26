@@ -5,6 +5,8 @@
   --med-gray: #EFEFEF;
   --bmv-red: #cf152d;
   --bmv-blue: #2b56d8;
+  --lt-blue: #6183e9;
+  --drk-blue: #183eaf;
   --alert-red: #be0f11;
   --bold: 700;
   --semi: 600;
@@ -105,26 +107,42 @@ header.row {
   background:#fff;
 }*/
 .radio-wrapper label {
-  padding:8px;
-  padding-left:25px;
-  margin-left:-25px;
-  border-radius:8px;
-  z-index:199;
-  position:relative;
+  padding: 8px 20px 8px 35px;
+  margin-left: -25px;
+  border-radius: 8px;
+  z-index: 199;
+  position: relative;
+  cursor: pointer;
 }
 .radio-wrapper input[type="radio"]:checked + label {
   background:#fff;
 }
 .radio-wrapper input[type="radio"] {
-  margin-right:5px;
-  margin-left:8px;
-  z-index:200;
-  position:relative;
+  margin-right: 0;
+  margin-left: 8px;
+  z-index: 200;
+  position: relative;
+  cursor: pointer;
+}
+.custom-radio{
+  width: calc(100% - 6px);
+  height: calc(100% - 6px);
+  border-radius: 50%;
+  background: ;
+  display: inline-block;
+  opacity: 1;
+  transition: all .5s ease-in-out;
+}
+.custom-radio input{
+  display: none;
+}
+.custom-radio input:checked + .checkmark{
+  opacity: 1;
 }
 
 .fixed-top {
   position:fixed;
-  top:10px;
+  top: 47px;
 }
 
 /* Header Pull Circle */
@@ -132,8 +150,8 @@ header.row {
 .pull-circle:before {
   content: '';
   position: absolute;
-  margin-left:-10px;
-  top: 0px;
+  margin-left: -10px;
+  top: -5px;
   width: 24px;
   height: 24px;
   clip-path: ellipse(16% 16% at 19% 24%);
@@ -154,7 +172,7 @@ header.row {
 }
 .address-box .street {
   display:flex;
-  flex:1 100%;
+  /* flex:1 100%; */
   max-width:720px;
   flex-wrap:wrap;
   flex-direction:row;
@@ -493,8 +511,8 @@ button.mnavtrigger {
 }
 .stepper .back {
   position:absolute;
-  top:10px;
-  left:10px;
+  top:22px;
+  left:14px;
   border-radius:16px;
   color:#fff;
   padding:8px 15px;
@@ -507,19 +525,20 @@ button.mnavtrigger {
   background:#142881;
 }*/
 .stepper .back i {
-  font-size:12px;
+  font-size:20px;
+  margin-right: 10px;
 }
 .stepper-content {
   display:flex;
   flex:1 70%;
-  padding:30px;
-  padding-top:60px;
+  padding:80px 45px;
+  padding-top: 80px;
   position:relative;
   align-items:flex-start;
   flex-wrap:wrap;
   flex-direction:row;
   align-content:flex-start;
-  padding-bottom:60px;
+  padding-bottom:70px;
 }
 .stepper-content .step-description {
   display:flex;
@@ -531,11 +550,9 @@ button.mnavtrigger {
   font-size:1em;
 }
 .step-wrapper {
-  background:#eaeaea;
+  background:#f6f6f6;
   border-radius:8px;
-  padding:20px;
-  padding-bottom:20px;
-  padding-right:0px;
+  padding:20px 30px;
   margin-bottom:20px;
   display:flex;
   flex:1 100%;
@@ -566,29 +583,31 @@ button.mnavtrigger {
   margin-bottom:10px;
 }
 .stepper-content .action-bar {
-  display:flex;
-  position:absolute;
-  bottom:0px;
-  right:0px;
-  width:100%;
-  height:60px;
+  display: flex;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  width: 100%;
+  height: 60px;
+  padding: 20px 45px;
+  margin-bottom: 15px;
   justify-content: flex-start;
-  align-items:center;
-  background:#eaeaea;
-  border-bottom-right-radius:16px;
+  align-items: center;
+  background: #ffffff;
+  border-bottom-right-radius: 16px;
 }
 .stepper h1 {
-  color:#fff;
-  font-size:1.5em;
-  line-height:1.1em;
-  font-weight:var(--semi);
-  flex:1 100%;
-  padding-top:0px;
-  padding-right:0px;
-  margin:0px;
-  margin-bottom:15px;
-  margin-top:10px;
-  position:relative;
+  color: #fff;
+  font-size: 1.5em;
+  line-height: 1.1em;
+  font-weight: var(--semi);
+  flex: 1 100%;
+  padding-right: 0px;
+  padding-left: 20px;
+  margin: 0px;
+  margin-bottom: 27px;
+  margin-top: 30px;
+  position: relative;
 }
 
 .stepper ol {
@@ -608,14 +627,14 @@ button.mnavtrigger {
   align-items:center;
   color:#fff;
   font-size:1.15em;
-  margin-bottom:15px;
+  margin-bottom: 30px;
 }
 .stepper ol li .wrapper {
   display:flex;
   position:relative;
   left:-15px;
-  height:50px;
-  max-width:50px;
+  height:56px;
+  max-width:56px;
   flex:1;
   font-size:1.15em;
   font-weight:var(--semi);
@@ -627,10 +646,10 @@ button.mnavtrigger {
   border:3px solid #fff;
 }
 .stepper ol li.active .wrapper {
-  height:50px;
-  width:50px;
+  height:56px;
+  width:56px;
   left:-15px;
-  border:4px solid #fff;
+  border: 0 solid #fff;
   background:var(--bmv-red);
   color:#fff;
   display:flex;
@@ -651,6 +670,7 @@ button.mnavtrigger {
 }
 .stepper ol li.complete .wrapper {
   background:#fff;
+  border: 0;
   color:var(--bmv-blue);
 }
 .stepper ol li.last {
@@ -668,7 +688,7 @@ button.mnavtrigger {
   font-weight:var(--semi);
   align-items:center;
   position:relative;
-  line-height:1em;
+  line-height:1.2em;
 }
 .stepper-content h2 .step-number {
   background:var(--bmv-red);
@@ -723,26 +743,28 @@ button.mnavtrigger {
 
 /* Buttons */
 .button {
-  min-height:34px;
+  /* min-height:34px; */
+  height: 44px;
   margin-top:5px;
   margin-bottom:5px;
-  padding-left:30px;
-  padding-right:30px;
-  min-width:120px;
+  padding-left:20px;
+  padding-right:20px;
+  min-width:100px;
   display:flex;
   position:relative;
   flex:1;
   justify-content:center;
   align-items:center;
   border:1px solid;
-  border-radius:17px;
+  border-radius:30px;
   font-size:1.125em;
   max-width:360px;
+  cursor: pointer;
 }
 a.btn-primary:focus {
   outline:none;
   border-style:double;
-    border-color:#fff;
+  border-color:#fff;
   border-width:6px;
 }
 a.btn-blue:focus {
@@ -751,22 +773,45 @@ a.btn-blue:focus {
 .button:hover {
   text-decoration:none;
 }
+.button::after {
+  font-family:"Material Icons";
+  content:"keyboard_arrow_right";
+  font-size:22px;
+  display:block;
+  position:absolute;
+  right:15px;
+  opacity: 0;
+  transition: all .2s ease-in-out;
+}
 .button:hover::after {
   font-family:"Material Icons";
   content:"keyboard_arrow_right";
-  font-size:12px;
+  font-size:22px;
   display:block;
   position:absolute;
   right:10px;
+  opacity: 1;
+}
+.button.reverse::after {
+  font-family:"Material Icons";
+  content:"keyboard_arrow_left";
+  font-size:22px;
+  display:block;
+  position:absolute;
+  left:15px;
+  opacity: 0;
+  transition: all .2s ease-in-out;
 }
 .button.reverse:hover::after {
   font-family:"Material Icons";
   content:"keyboard_arrow_left";
-  font-size:12px;
+  font-size:22px;
   display:block;
   position:absolute;
   left:10px;
+  opacity: 1;
 }
+
 .button.primary {
   background:var(--bmv-red);
   color:var(--white);
@@ -2011,8 +2056,7 @@ a.tile > .title::after{
   }
   .stepper {
     flex:1 100%;
-    border-bottom-left-radius:0px;
-    border-top-right-radius:16px;
+    border-radius:0!important;
     padding-bottom:0px;
     padding-left:15px;
     padding-right:15px;
@@ -2020,12 +2064,9 @@ a.tile > .title::after{
     position:relative;
   }
   .stepper-content {
-    flex:1 100%;
-    margin-top:20px;
-    padding-top:10px;
-    padding-left:15px;
-    padding-right:15px;
-    padding-bottom:80px;
+    flex: 0;
+    padding: 30px 20px;
+    margin: 0 auto;
   }
   .stepper ol {
     flex-direction:row;
@@ -2052,7 +2093,10 @@ a.tile > .title::after{
     margin-top:0px;
     margin-right:0px;
     padding-top:0px;
-    border-top:3px solid #fff;
+    border-top:3px solid var(--lt-blue);
+  }
+  .stepper ol li.complete {
+    border-color: #b8c7f5;
   }
   .stepper ol li:last-child {
     max-width:24px;
@@ -2063,8 +2107,8 @@ a.tile > .title::after{
     flex:1;
   }
   .stepper h1 {
-    text-align:center;
-    padding-bottom:0px;
+    font-size: 28px;
+    padding: 0 20px;
     margin-bottom:0px;
   }
   .stepper ol li .wrapper{
@@ -2074,7 +2118,7 @@ a.tile > .title::after{
     max-height:24px;
     left:auto;
     font-size:1.25em;
-    border:3px solid white;
+    border:5px solid var(--lt-blue);
     margin-top:-12px;
     background:var(--bmv-blue);
   }
@@ -2082,7 +2126,7 @@ a.tile > .title::after{
     display:none;
   }
   .stepper ol li.complete .wrapper:after {
-    font-size:12px;
+    font-size:16px;
   }
   .stepper ol li.active .wrapper{
     display:flex;
@@ -2092,13 +2136,14 @@ a.tile > .title::after{
     left:auto;
     color:#fff;
     font-weight:var(--bold);
-    background:var(--bmv-red);
+    border:5px solid var(--lt-blue);
+    background:white;
     font-size:1.25em;
   }
   .stepper .expander {
     display:block;
     width:100%;
-    height:30px;
+    height:20px;
     position:relative;
     margin-left:auto;
     margin-right:auto;
@@ -2112,21 +2157,22 @@ a.tile > .title::after{
     height:fit-content;
   }
   .stepper .expander .wrapper{
-    background:var(--bmv-blue);
+    background:var(--lt-blue);
     color:#fff;
-    border:1px solid #fff;
+    border:0;
     left:0;
     right:0;
     display:flex;
-    margin-left:auto;
-    margin-right:auto;
-    border-radius:15px;
+    
+    border-radius:50%;
     align-items:center;
     justify-content: center;
     align-content:center;
-    width:30px;
-    height:30px;
-    margin-top:15px;
+    width:40px;
+    height:40px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 9999;
   }
   .stepper .expander .wrapper:after{
     display:flex;
@@ -2139,24 +2185,22 @@ a.tile > .title::after{
     content:"expand_less";
   }
   .stepper-content h2 {
-    padding-top:0px;
-    padding-left:10px;
-    padding-right:10px;
+    padding: 0 10px;
   }
   .stepper-content .step-description {
-    padding-left:10px;
-    padding-right:10px;
+    padding: 0 10px;
   }
   .stepper-content h2 .step-number {
     display:none;
   }
 .stepper-content .action-bar {
-    position:fixed;
-    border-radius:0px;
-    left:0px;
-    bottom:0px;
-    width:100%;
-    z-index:1800;
+  position: fixed;
+  border-radius: 0px;
+  left: 0px;
+  bottom: 0px;
+  margin-bottom: 0;
+  width: 100%;
+  z-index: 1800;
   }
 .stepper-content .action-bar a {
     width:100%;
@@ -2183,8 +2227,8 @@ a.tile > .title::after{
   max-width:none;
 }
 .stepper ol.expanded {
-    padding-left:30px;
-    padding-right:30px;
+    padding-left:10px;
+    padding-right:10px;
   }
 .stepper ol.expanded li {
     position:relative;
@@ -2204,10 +2248,10 @@ a.tile > .title::after{
     display:flex;
     position:absolute;
     left:-16px;
-    height:30px;
-    width:30px;
+    height:35px;
+    width:35px;
     flex:1;
-    border:3px solid #fff;
+    /* border:3px solid #fff; */
     border-radius:18px;
     justify-content: center;
     align-items:center;
@@ -2222,10 +2266,10 @@ a.tile > .title::after{
     justify-content:center;
   }
   .stepper ol.expanded li.active .wrapper {
-    height:34px;
-    width:34px;
+    height:35px;
+    width:35px;
     left:-18px;
-    border:4px solid #fff;
+    border:0px solid #fff;
     background:var(--bmv-red);
     color:#fff;
     display:flex;
@@ -3242,13 +3286,12 @@ ul.record-list li > span.notice{
     background:#fff;
     display:flex;
     flex:1;
-    margin-top:30px;
+    margin-top:0;
     max-width:1260px;
     /*box-shadow:0px 0px 32px 6px rgba(0,0,0,.05);*/
     flex-wrap:wrap;
     flex-direction:row;
     align-items:flex-start;
-    border-radius:16px;
   }
   .product section article header {
     display:flex;
@@ -3377,15 +3420,16 @@ ul.record-list li > span.notice{
     margin-right:5px;
   }
   .step-wrapper {
-    padding-right:10px;
+    padding: 20px 15px;
   }
   .radio-wrapper {
-    flex:1 100%;
-    max-width:none;
-    align-items:center;
-    align-content:center;
-    display:flex;
-    padding-bottom:10px;
+    flex: 1 100%;
+    min-width: 100%;
+    align-items: center;
+    align-content: center;
+    display: flex;
+    padding-bottom: 10px;
+    margin-right: 0;
   }
   .radio-wrapper label {
     height:34px;
@@ -3396,7 +3440,16 @@ ul.record-list li > span.notice{
     align-items:center;
     align-content:center;
     padding-top:5px;
+    background: transparent;
+    transition: all .2s ease-in-out;
   }
+  .step-wrapper .fieldwrapper {
+    margin-right: 0;
+    background: #fff;
+    flex: 1;
+    min-width: 300px;
+    margin-bottom: 10px;
+}
 
 }
 
@@ -3760,7 +3813,7 @@ ul.record-list li > span.notice{
 }
 @media (min-width:768px){
   .stepper {
-      flex:1 35%;
+      flex:1 24%;
   }
   .stepper-content {
     flex:1 65%;
@@ -4355,6 +4408,7 @@ ul.record-list li > span.notice{
     align-items:flex-start;
     flex-wrap:wrap;
     flex-direction:row;
+    margin-bottom: 50px;
   }
   .product section {
     display:flex;
