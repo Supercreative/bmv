@@ -2064,8 +2064,8 @@ a.tile > .title::after{
     position:relative;
   }
   .stepper-content {
-    flex: 0;
-    padding: 30px 20px;
+    flex: 1;
+    padding: 30px 20px 120px 20px;
     margin: 0 auto;
   }
   .stepper ol {
@@ -2163,7 +2163,7 @@ a.tile > .title::after{
     left:0;
     right:0;
     display:flex;
-    
+
     border-radius:50%;
     align-items:center;
     justify-content: center;
@@ -2172,7 +2172,7 @@ a.tile > .title::after{
     height:40px;
     margin: 0 auto;
     position: relative;
-    z-index: 9999;
+    z-index: 300;
   }
   .stepper .expander .wrapper:after{
     display:flex;
@@ -2201,9 +2201,18 @@ a.tile > .title::after{
   margin-bottom: 0;
   width: 100%;
   z-index: 1800;
+  padding:5px 30px;
+  height:fit-content;
+  align-items:flex-start;
+  align-content:flex-start;
+  flex-wrap:wrap;
+  flex-direction:row;
   }
 .stepper-content .action-bar a {
-    width:100%;
+  flex: 1 100%;
+  flex-basis: 40%;
+  display: flex;
+  max-width: none;
   }
 .stepper ol.expanded {
     flex-wrap:wrap;
