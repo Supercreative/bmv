@@ -820,6 +820,63 @@ button.mnavtrigger {
 }
 .ml-auto {margin-left:auto;float:none;}
 .mr-auto {margin-right:auto;float:none;}
+.stepper-content .pagination ul li {
+  background:var(--lt-gray);
+}
+.pagination {
+  display:flex;
+  flex:1;
+  justify-content:center;
+  align-items:flex-start;
+  align-content:flex-start;
+}
+.pagination ul {
+  padding-left:0px;
+  margin-left:0px;
+  display:flex;
+  justify-content:center;
+  align-items:stretch;
+  align-content:flex-start;
+}
+.pagination ul li {
+  display:flex;
+  flex:1;
+  background:#fff;
+  justify-content: center;
+  align-items:stretch;
+  align-content:flex-start;
+  min-width:34px;
+  margin-left:5px;
+  margin-right:5px;
+  position:relative;
+}
+.pagination ul li.skip {
+  background:none;
+}
+.pagination ul li.active::after {
+  content:"";
+  background:#5C5A5B;
+  font-weight:var(--reg);
+  display:block;
+  position:absolute;
+  width:100%;
+  height:4px;
+  bottom:-4px;
+}
+.pagination ul li a {
+  display:flex;
+  flex:1 100%;
+  justify-content: center;
+  align-items:stretch;
+  align-content:center;
+  color:#5C5A5B;
+  padding-left:10px;
+  padding-right:10px;
+}
+.pagination ul li a i.material-icons {
+  margin-left:-5px;
+  margin-right:-5px;
+}
 
 /* End Utility Classes */
 
@@ -922,6 +979,13 @@ a.btn-blue:focus {
 .button.small {
   min-height:24px;
   font-size:1em;
+}
+.button.slim {
+  height:34px;
+  max-width:180px;
+  font-size:16px;
+  padding-left:10px;
+  padding-right:10px;
 }
 .button.soft {
   max-height:30px;
@@ -1260,6 +1324,47 @@ form.gray .fieldwrapper {
   flex:1 100%;
   max-width:800px;
 }
+.step-wrapper ul.results {
+  display:flex;
+  flex:1 100%;
+  justify-content:flex-start;
+  align-items:flex-start;
+  align-content:flex-start;
+  flex-wrap:wrap;
+  padding-left:0px;
+  margin-right:0px;
+}
+.step-wrapper ul.results li {
+  display:flex;
+  flex:1 100%;
+  background:#fff;
+  border-radius:17px;
+  justify-content:flex-start;
+  align-items:center;
+  align-content:center;
+  padding-left:15px;
+  font-weight:var(--bold);
+  margin-bottom:10px;
+}
+.step-wrapper ul.results li a {
+  margin-right:5px;
+  margin-left:auto;
+  font-weight:var(--reg);
+  align-items:center;
+  align-content:center;
+}
+.step-wrapper ul.results li a:hover {
+  background:#757575;
+  color:#fff;
+}
+.step-wrapper ul.results li a i {
+  font-size:.875em;
+  margin-left:5px;
+  margin-right:0px;
+}
+.step-wrapper ul.results li a:hover i {
+  color:#fff;
+}
 input.text, textarea.text{
   background:none;
   color:var(--black);
@@ -1294,6 +1399,9 @@ textarea.text {
   height:auto;
   max-height:none;
   min-height:200px;
+}
+.textarea label.text {
+  background:#fff;
 }
 .fieldwrapper:focus-within label.text, .fieldwrapper.focus label.text {
   animation-duration: .5s;
@@ -2751,6 +2859,7 @@ nav.topnav .rightblock li.item a:hover {
 .button {
   min-height:34px;
 }
+
 .button:hover::after {
   display:none;
 }
@@ -3560,6 +3669,9 @@ ul.record-list li > span.notice{
     min-width: 300px;
     margin-bottom: 10px;
 }
+  .step-wrapper .fieldwrapper.hint {
+    margin-bottom:30px;
+  }
 
 }
 
@@ -4286,6 +4398,10 @@ ul.record-list li > span.notice{
     width:calc(100% - 60px);
   }
   /* End Cart Page */
+
+  .step-wrapper ul.results {
+    padding-right:50%;
+  }
 }
 
 
