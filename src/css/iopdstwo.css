@@ -1255,7 +1255,12 @@ form.gray .fieldwrapper {
   border-top-left-radius:5px;
   border-top-right-radius:5px;
 }
-input.text {
+.step-wrapper .fieldwrapper.textarea {
+  height:fit-content;
+  flex:1 100%;
+  max-width:800px;
+}
+input.text, textarea.text{
   background:none;
   color:var(--black);
   border-left:0px;
@@ -1285,6 +1290,11 @@ label.text {
   line-height:50px;
   margin:0px;
 }
+textarea.text {
+  height:auto;
+  max-height:none;
+  min-height:200px;
+}
 .fieldwrapper:focus-within label.text, .fieldwrapper.focus label.text {
   animation-duration: .5s;
   animation-name: focuslabel;
@@ -1295,7 +1305,7 @@ label.text {
   color:var(--bmv-blue);
   z-index:200;
 }
-.fieldwrapper input.text:focus, .fieldwrapper.focus input.text {
+.fieldwrapper input.text:focus, .fieldwrapper textarea.text:focus, .fieldwrapper.focus input.text, .fieldwrapper.focus textarea.text {
   outline:none;
   animation-duration: .5s;
   animation-name: focusfield;
